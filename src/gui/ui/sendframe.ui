@@ -68,7 +68,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Wallet is connected through remote node. Additional fee of %1% will be applied, until a maximum limit of 10 NBR.</string>
+          <string>Wallet is connected through remote node. Additional fee of %1% will be applied, until a maximum limit of 10 Q1V.</string>
          </property>
         </widget>
        </item>

@@ -23,11 +23,11 @@ using namespace boost;
 using namespace WalletGui;
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOIN_IPC_PREFIX("niobiocash:");
+const QString BITCOIN_IPC_PREFIX("q1v:");
 
 static QString ipcServerName()
 {
-    QString name("niobiocash");
+    QString name("q1v");
 
     return name;
 }
@@ -93,14 +93,14 @@ PaymentServer::PaymentServer(QApplication* parent) : QObject(parent), saveURIs(t
     uriServer = new QLocalServer(this);
 
     if (!uriServer->listen(name))
-        qDebug() << tr("Cannot start niobiocash: click-to-pay handler");
+        qDebug() << tr("Cannot start q1v: click-to-pay handler");
     else
         connect(uriServer, SIGNAL(newConnection()), this, SLOT(handleURIConnection()));
 }
 
 bool PaymentServer::eventFilter(QObject *object, QEvent *event)
 {
-    // clicking on niobiocash: URLs creates FileOpen events on the Mac:
+    // clicking on q1v: URLs creates FileOpen events on the Mac:
     if (event->type() == QEvent::FileOpen)
     {
         QFileOpenEvent* fileEvent = static_cast<QFileOpenEvent*>(event);

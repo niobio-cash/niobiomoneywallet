@@ -116,7 +116,7 @@ void MainWindow::connectToSignals() {
 }
 
 void MainWindow::setDefaultWindowTitle() {
-    setWindowTitle(QString(tr("Niobio Cash Wallet %1")).arg(Settings::instance().getVersion()) + " - " + Settings::instance().getWalletFile());
+    setWindowTitle(QString(tr("Asset QUAN - First Version wallet %1")).arg(Settings::instance().getVersion()) + " - " + Settings::instance().getWalletFile());
 }
 
 void MainWindow::initUi() {
@@ -559,7 +559,7 @@ void MainWindow::DisplayCmdLineHelp() {
     QMessageBox *msg = new QMessageBox(QMessageBox::Information, QObject::tr("Help"),
                        cmdLineParser.getHelpText(),
                        QMessageBox::Ok, this);
-    msg->setInformativeText(tr("More info can be found at project's web site: niobiocash.org"));
+    msg->setInformativeText(tr("More info can be found at project's web site: quan-project.com"));
     QFont font = QFontDatabase::systemFont(QFontDatabase::FixedFont);
     msg->setFont(font);
     QSpacerItem* horizontalSpacer = new QSpacerItem(650, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
@@ -904,7 +904,7 @@ void MainWindow::createTrayIcon()
 {
 #ifdef Q_OS_WIN
     m_trayIcon = new QSystemTrayIcon(QPixmap(":images/cryptonote"), this);
-    QString toolTip = QString(tr("Niobio Cash Wallet %1")).arg(Settings::instance().getVersion());
+    QString toolTip = QString(tr("Asset QUAN - First Version wallet %1")).arg(Settings::instance().getVersion());
     m_trayIcon->setToolTip(toolTip);
     m_trayIcon->show();
 #endif

@@ -1,4 +1,4 @@
-Release notes Niobio Cash Wallet
+Release notes Asset QUAN - First Version wallet
 
 v1.3.7
 - NCIP 0004: Allows flexible wallet node fee
@@ -29,7 +29,7 @@ v.1.3.3
 v.1.3.2
 - Use niobio-wallet repository for update.txt location
 - Prepare for hard fork to block version 5: decrease reward and cryptonight heavy
-- Lock sending NBR while wallet is not synchronized
+- Lock sending Q1V while wallet is not synchronized
 
 v.1.3.1
 - Fix checkpoint range handling for PoW verification

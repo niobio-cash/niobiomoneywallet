@@ -3,7 +3,7 @@
 #include "TranslatorManager.h"
 
 TranslatorManager* TranslatorManager::m_Instance = 0;
-
+/*
 TranslatorManager::TranslatorManager()
 {
     QString defaultLang = "uk_UA";
@@ -12,6 +12,32 @@ TranslatorManager::TranslatorManager()
 
     QStringList languages;
     languages << "uk_UA" << "ru_RU" << "pl_PL";
+
+    for (int j = 0; j < resources.size(); j++)
+    {
+        QTranslator* pTranslator = new QTranslator;
+        if (pTranslator->load(resources[j], ":/"))
+        {
+            if (languages[j] == defaultLang)
+            {
+                qApp->installTranslator(pTranslator);
+                m_keyLang = languages[j];
+            }
+
+            m_translators.insert(languages[j], pTranslator);
+        }
+    }
+}
+*/
+
+TranslatorManager::TranslatorManager()
+{
+    QString defaultLang = "pt_PT";
+    QStringList resources;
+    resources << "languages/pt";
+
+    QStringList languages;
+    languages << "pt_PT";
 
     for (int j = 0; j < resources.size(); j++)
     {

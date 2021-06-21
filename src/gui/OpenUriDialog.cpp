@@ -10,7 +10,7 @@ namespace WalletGui {
 
 OpenUriDialog::OpenUriDialog(QWidget* _parent) : QDialog(_parent), m_ui(new Ui::OpenUriDialog) {
   m_ui->setupUi(this);
-  m_ui->m_uriEdit->setPlaceholderText("niobiocash:");
+  m_ui->m_uriEdit->setPlaceholderText("q1v:");
 }
 
 OpenUriDialog::~OpenUriDialog() {

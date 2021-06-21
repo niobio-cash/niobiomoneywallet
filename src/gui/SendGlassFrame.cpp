@@ -131,7 +131,7 @@ void SendGlassFrame::drawProgressLabel(QPainter &_painter) {
   QFont font;
   font.setBold(true);
   font.setPixelSize(14);
-  QString msg = tr("Você poderá enviar NBR quando\na carteira estiver sincronizada");
+  QString msg = tr("Você poderá enviar Q1V quando\na carteira estiver sincronizada");
   QFontMetrics fm(font);
   QRect messageRect = fm.boundingRect(QRect(), Qt::AlignCenter, msg);
   messageRect.moveCenter(QPoint(m_pixmapBuffer.width() / 2, 163));

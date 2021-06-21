@@ -65,7 +65,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>:/images/logo.png</pixmap>
+      <pixmap>:/images/logo1.png</pixmap>
      </property>
     </widget>
    </item>
@@ -340,7 +340,7 @@
           </size>
          </property>
          <property name="text">
-          <string> nbr</string>
+          <string> q1v</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>

@@ -160,16 +160,5 @@ gui/ui/restorefrommnemonicseeddialog.ui \
 gui/ui/verifymnemonicseeddialog.ui \
 
 
-TRANSLATIONS = 	languages/uk.ts \
-				languages/ru.ts \
-				languages/pl.ts \
-				languages/be.ts \
-				languages/de.ts \
-				languages/es.ts \
+TRANSLATIONS = 	languages/es.ts \
 				languages/pt.ts \
-				languages/ja.ts \
-				languages/it.ts \
-				languages/ko.ts \
-				languages/zh.ts \
-				languages/hi.ts \
-				languages/ar.ts \ 

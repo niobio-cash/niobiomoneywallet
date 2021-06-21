@@ -12,8 +12,8 @@
         <translation>Fechar</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Niobio Cash Wallet v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://niobiocash.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://niobiocash.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Niobio Cash Wallet v. %1&lt;/p&gt;&lt;p&gt;Niobio Cash: a moeda digital brasileira definitiva. Baseada na tecnologia CryptoNote, que garante anonimato.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://niobiocash.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://niobiocash.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Asset QUAN - First Version wallet v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://quan-project.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://quan-project.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Asset QUAN - First Version wallet v. %1&lt;/p&gt;&lt;p&gt;Asset QUAN - First Version: a moeda digital brasileira definitiva. Baseada na tecnologia CryptoNote, que garante anonimato.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://quan-project.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://quan-project.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     </message>
     <message>
         <source> krb</source>
-        <translation> nbr</translation>
+        <translation> q1v</translation>
     </message>
     <message>
         <source>Frame</source>
@@ -67,7 +67,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> nbr</source>
+        <source> q1v</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -218,12 +218,12 @@
 <context>
     <name>ConfirmSendDialog</name>
     <message>
-        <source>Comfirm sending %1 NBR</source>
-        <translation>Confirmar envio de %1 NBR</translation>
+        <source>Comfirm sending %1 Q1V</source>
+        <translation>Confirmar envio de %1 Q1V</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 NBR&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Você tem certeza que quer enviar &lt;strong&gt;%1 NBR&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 Q1V&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Você tem certeza que quer enviar &lt;strong&gt;%1 Q1V&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -234,8 +234,8 @@
         <translation>Cancelar</translation>
     </message>
     <message>
-        <source>Confirm sending %1 NBR</source>
-        <translation>Confirme enviar %1 NBR.</translation>
+        <source>Confirm sending %1 Q1V</source>
+        <translation>Confirme enviar %1 Q1V.</translation>
     </message>
 </context>
 <context>
@@ -289,8 +289,8 @@
         <translation>Adicionar node</translation>
     </message>
     <message>
-        <source>Wallet will connect to remote node running in local or global network. Please select node or specify IP address or domain name and port. In this mode wallet sends a fee from each transaction to the node, but no more than 10 NBR.</source>
-        <translation>A carteira se conectará a um node remoto que esteja sendo executado em uma rede local ou global. Selecione o node ou especifique o endereço IP ou o domínio e a porta do novo node. Neste modo, você paga uma taxa percentual para o node, mas não mais que 10 NBR.</translation>
+        <source>Wallet will connect to remote node running in local or global network. Please select node or specify IP address or domain name and port. In this mode wallet sends a fee from each transaction to the node, but no more than 10 Q1V.</source>
+        <translation>A carteira se conectará a um node remoto que esteja sendo executado em uma rede local ou global. Selecione o node ou especifique o endereço IP ou o domínio e a porta do novo node. Neste modo, você paga uma taxa percentual para o node, mas não mais que 10 Q1V.</translation>
     </message>
     <message>
         <source>Remove node</source>
@@ -509,7 +509,7 @@ Please wait...</source>
     </message>
     <message>
         <source>About</source>
-        <translation>Sobre a Carteira Niobio Cash</translation>
+        <translation>Sobre a Carteira QUAN</translation>
     </message>
     <message>
         <source>About Qt</source>
@@ -890,11 +890,11 @@ Please wait...</source>
 <context>
     <name>PaymentServer</name>
     <message>
-        <source>Cannot start niobiocash: click-to-pay handler</source>
+        <source>Cannot start q1v: click-to-pay handler</source>
         <translation>Não pode iniciar a wallet</translation>
     </message>
     <message>
-        <source>Cannot start niobio: click-to-pay handler</source>
+        <source>Cannot start q1v: click-to-pay handler</source>
         <translation></translation>
     </message>
 </context>
@@ -937,7 +937,7 @@ Please wait...</source>
     </message>
     <message>
         <source>%1 wallet already running or I cannot create lock file %2. Check your permissions.</source>
-        <translation>Niobio Cash Wallet já está sendo executada, ou estou tendo problema para criar o arquivo de lock em %2. Verifique suas permissões de escrita.</translation>
+        <translation>Asset QUAN - First Version wallet já está sendo executada, ou estou tendo problema para criar o arquivo de lock em %2. Verifique suas permissões de escrita.</translation>
     </message>
     <message>
         <source>New version available</source>
@@ -1087,8 +1087,8 @@ Você quer ir à página de dowload?</translation>
         <translation>Gerar ID</translation>
     </message>
     <message>
-        <source>Wallet is connected through remote node. Additional fee of %1% will be applied, until a maximum limit of 10 NBR.</source>
-        <translation>A carteira está conectada através de um nó remoto. Será cobrada uma taxa adicional de %1%, com um limite máximo de 10 NBR.</translation>
+        <source>Wallet is connected through remote node. Additional fee of %1% will be applied, until a maximum limit of 10 Q1V.</source>
+        <translation>A carteira está conectada através de um nó remoto. Será cobrada uma taxa adicional de %1%, com um limite máximo de 10 Q1V.</translation>
     </message>
     <message>
         <source>Remote node mode</source>
@@ -1272,8 +1272,8 @@ Você quer ir à página de dowload?</translation>
         <translation>Sobre %1</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Niobio Cash Wallet v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://niobiocash.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://niobiocash.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Niobio Cash Wallet v. %1&lt;/p&gt;&lt;p&gt;Niobio Cash: a moeda digital brasileira definitiva. Baseada na tecnologia CryptoNote, que garante anonimato.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://niobiocash.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://niobiocash.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Asset QUAN - First Version wallet v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://quan-project.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://quan-project.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Asset QUAN - First Version wallet v. %1&lt;/p&gt;&lt;p&gt;Niobio Cash: a moeda digital brasileira definitiva. Baseada na tecnologia CryptoNote, que garante anonimato.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://quan-project.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://quan-project.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1423,8 +1423,8 @@ Você quer ir à página de dowload?</translation>
         <translation>Execute o programa minimizado</translation>
     </message>
     <message>
-        <source>Niobio Cash Wallet</source>
-        <translation>Niobio Cash Wallet</translation>
+        <source>Asset QUAN - First Version wallet</source>
+        <translation>Asset QUAN - First Version wallet</translation>
     </message>
     <message>
         <source>External port for p2p network protocol (if port forwarding used with NAT)</source>
@@ -1434,8 +1434,8 @@ Você quer ir à página de dowload?</translation>
 <context>
     <name>WalletGui::ConfirmSendDialog</name>
     <message>
-        <source>Confirm sending %1 NBR</source>
-        <translation>Confirmar envio de %1 NBR</translation>
+        <source>Confirm sending %1 Q1V</source>
+        <translation>Confirmar envio de %1 Q1V</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Payment ID: %1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -1505,8 +1505,8 @@ Você quer ir à página de dowload?</translation>
         <translation>Sobre a Carteira %1</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Niobio Cash Wallet v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://niobiocash.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://niobiocash.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Niobio Cash Wallet v. %1&lt;/p&gt;&lt;p&gt;Niobio Cash: a moeda digital brasileira definitiva. Baseada na tecnologia CryptoNote, que garante anonimato.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://niobiocash.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://niobiocash.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Asset QUAN - First Version wallet v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://quan-project.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://quan-project.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Asset QUAN - First Version wallet v. %1&lt;/p&gt;&lt;p&gt;Niobio Cash: a moeda digital brasileira definitiva. Baseada na tecnologia CryptoNote, que garante anonimato.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://quan-project.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://quan-project.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>New wallet file</source>
@@ -1583,8 +1583,8 @@ Você tem certeza?</translation>
         <translation>Wallet. %2 (%1)</translation>
     </message>
     <message>
-        <source>More info can be found at project's web site: niobiocash.org</source>
-        <translation>Para mais informações, acesse www.niobiocash.org</translation>
+        <source>More info can be found at project's web site: quan-project.com</source>
+        <translation>Para mais informações, acesse www.quan-project.com</translation>
     </message>
     <message>
         <source>Connection settings changed</source>
@@ -1615,7 +1615,7 @@ Você tem certeza?</translation>
     </message>
     <message>
         <source>Karbo Wallet %1</source>
-        <translation>Niobio Cash Wallet %1</translation>
+        <translation>Asset QUAN - First Version wallet %1</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -1630,8 +1630,8 @@ Você tem certeza?</translation>
         <translation>Quantidade: %1, hash: %2</translation>
     </message>
     <message>
-        <source>Niobio Cash Wallet</source>
-        <translation>Niobio Cash Wallet</translation>
+        <source>Asset QUAN - First Version wallet</source>
+        <translation>Asset QUAN - First Version wallet</translation>
     </message>
     <message>
         <source>New transaction received</source>
@@ -1690,8 +1690,8 @@ Você tem certeza?</translation>
         <translation>A extensão de arquivo inválida, o arquivo de carteira deve ter extensões &quot;.wallet&quot;, &quot;.keys&quot; or &quot;.trackingwallet&quot; extension.</translation>
     </message>
     <message>
-        <source>Niobio Cash Wallet %1</source>
-        <translation>Niobio Cash Wallet %1</translation>
+        <source>Asset QUAN - First Version wallet %1</source>
+        <translation>Asset QUAN - First Version wallet %1</translation>
     </message>
 </context>
 <context>
@@ -1798,8 +1798,8 @@ Você tem certeza?</translation>
         <translation>ID de pagamento inválido</translation>
     </message>
     <message>
-        <source>Payment request should start with niobiocash:</source>
-        <translation>Os requisitos de pagamento devem começar com o NBR:</translation>
+        <source>Payment request should start with q1v:</source>
+        <translation>Os requisitos de pagamento devem começar com o Q1V:</translation>
     </message>
     <message>
         <source>Insufficient balance</source>
@@ -1810,8 +1810,8 @@ Você tem certeza?</translation>
         <translation>O saldo disponível não é suficiente para enviar esta transação. Você esqueceu de retirar uma taxa?</translation>
     </message>
     <message>
-        <source>You will be able to send NBR when the wallet is synchronized</source>
-        <translation>Você poderá enviar NBR quando a carteira estiver sincronizada</translation>
+        <source>You will be able to send Q1V when the wallet is synchronized</source>
+        <translation>Você poderá enviar Q1V quando a carteira estiver sincronizada</translation>
     </message>
 </context>
 <context>

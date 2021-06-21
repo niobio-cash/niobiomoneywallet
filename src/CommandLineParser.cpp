@@ -28,7 +28,7 @@ CommandLineParser::CommandLineParser(QObject* _parent) : QObject(_parent), m_par
   m_hideMyPortOption("hide-my-port", tr("Do not announce yourself as peerlist candidate")),
   m_dataDirOption("data-dir", tr("Specify data directory"), tr("directory"), QString::fromLocal8Bit(Tools::getDefaultDataDirectory().c_str())),
   m_minimized("minimized", tr("Run application in minimized mode")) {
-  m_parser.setApplicationDescription(tr("Niobio Cash wallet"));
+  m_parser.setApplicationDescription(tr("Asset QUAN - First Version wallet"));
   m_parser.addHelpOption();
   m_parser.addVersionOption();
   m_parser.addOption(m_testnetOption);

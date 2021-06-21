@@ -12,8 +12,8 @@
         <translation>Cerrar</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Niobio Cash Wallet v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://niobiocash.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://niobiocash.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Niobio Cash Wallet v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://niobiocash.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://niobiocash.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Asset QUAN - First Version wallet v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://quan-project.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://quan-project.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Asset QUAN - First Version wallet v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;br/&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;br/&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;br/&gt;Copyright (c) 2017-2019. Niobio Cash developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;http://karbowanec.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://karbowanec.com/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://quan-project.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://quan-project.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     </message>
     <message>
         <source> krb</source>
-        <translation type="vanished"> nbr</translation>
+        <translation type="vanished"> q1v</translation>
     </message>
     <message>
         <source>Frame</source>
@@ -67,7 +67,7 @@
         <translation>0.00</translation>
     </message>
     <message>
-        <source> nbr</source>
+        <source> q1v</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -202,14 +202,14 @@
 <context>
     <name>ConfirmSendDialog</name>
     <message>
-        <source>Comfirm sending %1 NBR</source>
+        <source>Comfirm sending %1 Q1V</source>
         <translatorcomment>Ошибка в английском слове Comfirm (правильно Confirm)</translatorcomment>
-        <translation type="vanished">Confirma el envío de %1 NBR</translation>
+        <translation type="vanished">Confirma el envío de %1 Q1V</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 NBR&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 Q1V&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>Нужно добавить  знак &quot;¿&quot; перед вопросом</translatorcomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;¿Estás seguro de que quieres enviar &lt;strong&gt;%1 NBR&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;¿Estás seguro de que quieres enviar &lt;strong&gt;%1 Q1V&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -220,11 +220,11 @@
         <translation>Cancelar</translation>
     </message>
     <message>
-        <source>Confirm sending %1 NBR</source>
-        <translation type="obsolete">Confirma el envío de %1 NBR</translation>
+        <source>Confirm sending %1 Q1V</source>
+        <translation type="obsolete">Confirma el envío de %1 Q1V</translation>
     </message>
     <message>
-        <source>Confirm sending %1 NBR</source>
+        <source>Confirm sending %1 Q1V</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -279,15 +279,15 @@
         <translation>Añadir el nodo</translation>
     </message>
     <message>
-        <source>Wallet will connect to remote node running in local or global network. Please select node or specify IP address or domain name and port. In this mode wallet sends a fee from each transaction to the node, but no more than 10 NBR.</source>
-        <translation type="vanished">El monedero se conectará al nodo remoto que se ejecuta en la red local o global. Por favor, seleccione nodo o especifique la dirección IP o el nombre de dominio y puerto. En este modo, el monedero envía una comisión de cada transacción al nodo, pero no más de 10 NBR.</translation>
+        <source>Wallet will connect to remote node running in local or global network. Please select node or specify IP address or domain name and port. In this mode wallet sends a fee from each transaction to the node, but no more than 10 Q1V.</source>
+        <translation type="vanished">El monedero se conectará al nodo remoto que se ejecuta en la red local o global. Por favor, seleccione nodo o especifique la dirección IP o el nombre de dominio y puerto. En este modo, el monedero envía una comisión de cada transacción al nodo, pero no más de 10 Q1V.</translation>
     </message>
     <message>
         <source>Remove node</source>
         <translation>Eliminar nodo</translation>
     </message>
     <message>
-        <source>Wallet will connect to remote node running in local or global network. Please select node or specify IP address or domain name and port. In this mode wallet sends a fee from each transaction to the node, but no more than 10 NBR.</source>
+        <source>Wallet will connect to remote node running in local or global network. Please select node or specify IP address or domain name and port. In this mode wallet sends a fee from each transaction to the node, but no more than 10 Q1V.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -883,11 +883,11 @@ Por favor, espera...</translation>
 <context>
     <name>PaymentServer</name>
     <message>
-        <source>Cannot start niobiocash: click-to-pay handler</source>
-        <translation type="vanished">No se puede iniciar niobio: controlador de clic para pagar</translation>
+        <source>Cannot start q1v: click-to-pay handler</source>
+        <translation type="vanished">No se puede iniciar q1v: controlador de clic para pagar</translation>
     </message>
     <message>
-        <source>Cannot start niobio: click-to-pay handler</source>
+        <source>Cannot start q1v: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1082,7 +1082,7 @@ Do you want to go to download page?</source>
         <translation>Generar ID de pago</translation>
     </message>
     <message>
-        <source>Wallet is connected through remote node. Additional fee of %1% will be applied, until a maximum limit of 10 NBR.</source>
+        <source>Wallet is connected through remote node. Additional fee of %1% will be applied, until a maximum limit of 10 Q1V.</source>
         <translation>El monedero está conectado a través de un nodo remoto. Se aplicará una tasa adicional de %1%.</translation>
     </message>
     <message>
@@ -1409,7 +1409,7 @@ Do you want to go to download page?</source>
         <translation>Ejecutar la aplicación en modo minimizado</translation>
     </message>
     <message>
-        <source>Niobio Cash Wallet</source>
+        <source>Asset QUAN - First Version wallet</source>
         <translation>El monedero de Karbowanec</translation>
     </message>
     <message>
@@ -1420,8 +1420,8 @@ Do you want to go to download page?</source>
 <context>
     <name>WalletGui::ConfirmSendDialog</name>
     <message>
-        <source>Confirm sending %1 NBR</source>
-        <translation type="vanished">Confirma el envío de %1 NBR</translation>
+        <source>Confirm sending %1 Q1V</source>
+        <translation type="vanished">Confirma el envío de %1 Q1V</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Payment ID: %1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -1433,7 +1433,7 @@ Do you want to go to download page?</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;¿Estás seguro de que desea enviar &lt;strong&gt;sin ID de pago&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Confirm sending %1 NBR</source>
+        <source>Confirm sending %1 Q1V</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1571,8 +1571,8 @@ Are you sure?</source>
         <translation type="vanished">%1 Monedero %2</translation>
     </message>
     <message>
-        <source>More info can be found at project's web site: niobiocash.org</source>
-        <translation>Se puede encontrar más información en www.niobiocash.org</translation>
+        <source>More info can be found at project's web site: quan-project.com</source>
+        <translation>Se puede encontrar más información en www.quan-project.com</translation>
     </message>
     <message>
         <source>Connection settings changed</source>
@@ -1678,7 +1678,7 @@ Are you sure?</source>
         <translation>La extensión incorrecta del archivo del monedero, el archivo del monedero debe tener la extensión &quot;.wallet&quot;, &quot;.keys&quot; o &quot;.trackingwallet&quot;.</translation>
     </message>
     <message>
-        <source>Niobio Cash Wallet %1</source>
+        <source>Asset QUAN - First Version wallet %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1786,8 +1786,8 @@ Are you sure?</source>
         <translation>ID de pago inválido</translation>
     </message>
     <message>
-        <source>Payment request should start with niobiocash:</source>
-        <translation>La solicitud de pago debe comenzar con niobio:</translation>
+        <source>Payment request should start with q1v:</source>
+        <translation>La solicitud de pago debe comenzar con q1v:</translation>
     </message>
     <message>
         <source>Insufficient balance</source>

@@ -31,7 +31,7 @@ void WalletNodes::GetWalletNodes()
 {
   if(myNetManager->networkAccessible() == QNetworkAccessManager::Accessible)
   {
-    const QUrl WALLETNODES_LIST_URL("https://raw.githubusercontent.com/niobio-cash/wallet-support-files/master/wallet-nodes.txt");
+    const QUrl WALLETNODES_LIST_URL("https://raw.githubusercontent.com/quan-projects/wallet-support-files/master/wallet-nodes.txt");
     myNetReply = myNetManager->get(QNetworkRequest(WALLETNODES_LIST_URL));
     connect(myNetReply, &QNetworkReply::finished, this, &WalletNodes::OnListReadFinished);
   }
