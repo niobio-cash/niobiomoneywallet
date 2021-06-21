@@ -86,18 +86,18 @@ namespace
   {
     // If there's a new language added, add an instance of it here.
     std::vector<Language::Base*> language_instances({
-      Language::Singleton<Language::Chinese_Simplified>::instance(),
+      //Language::Singleton<Language::Chinese_Simplified>::instance(),
       Language::Singleton<Language::English>::instance(),
-      Language::Singleton<Language::Dutch>::instance(),
-      Language::Singleton<Language::French>::instance(),
+      /*Language::Singleton<Language::Dutch>::instance(),
+      Language::Singleton<Language::French>::instance(),*/
       Language::Singleton<Language::Spanish>::instance(),
-      Language::Singleton<Language::German>::instance(),
-      Language::Singleton<Language::Italian>::instance(),
-      Language::Singleton<Language::Portuguese>::instance(),
+      /*Language::Singleton<Language::German>::instance(),
+      Language::Singleton<Language::Italian>::instance(),*/
+      Language::Singleton<Language::Portuguese>::instance()/*,
       Language::Singleton<Language::Japanese>::instance(),
       Language::Singleton<Language::Russian>::instance(),
       Language::Singleton<Language::Ukrainian>::instance(),
-	  Language::Singleton<Language::Polish>::instance()
+	  Language::Singleton<Language::Polish>::instance()*/
     });
     Language::Base *fallback = NULL;
 
@@ -322,11 +322,13 @@ namespace Crypto
       }
       else if (language_name == "Nederlands")
       {
-        language = Language::Singleton<Language::Dutch>::instance();
+        //language = Language::Singleton<Language::Dutch>::instance();
+          language = Language::Singleton<Language::English>::instance();
       }
       else if (language_name == "Français")
       {
-        language = Language::Singleton<Language::French>::instance();
+        //language = Language::Singleton<Language::French>::instance();
+          language = Language::Singleton<Language::English>::instance();
       }
       else if (language_name == "Español")
       {
@@ -338,31 +340,38 @@ namespace Crypto
       }
       else if (language_name == "日本語")
       {
-        language = Language::Singleton<Language::Japanese>::instance();
+        //language = Language::Singleton<Language::Japanese>::instance();
+          language = Language::Singleton<Language::English>::instance();
       }
       else if (language_name == "Italiano")
       {
-        language = Language::Singleton<Language::Italian>::instance();
+        //language = Language::Singleton<Language::Italian>::instance();
+          language = Language::Singleton<Language::English>::instance();
       }
       else if (language_name == "Deutsch")
       {
-        language = Language::Singleton<Language::German>::instance();
+        //language = Language::Singleton<Language::German>::instance();
+          language = Language::Singleton<Language::English>::instance();
       }
       else if (language_name == "русский язык")
       {
-        language = Language::Singleton<Language::Russian>::instance();
+        //language = Language::Singleton<Language::Russian>::instance();
+          language = Language::Singleton<Language::English>::instance();
       }
       else if (language_name == "简体中文 (中国)")
       {
-        language = Language::Singleton<Language::Chinese_Simplified>::instance();
+        //language = Language::Singleton<Language::Chinese_Simplified>::instance();
+          language = Language::Singleton<Language::English>::instance();
       }
       else if (language_name == "українська мова")
       {
-        language = Language::Singleton<Language::Ukrainian>::instance();
+        //language = Language::Singleton<Language::Ukrainian>::instance();
+          language = Language::Singleton<Language::English>::instance();
       }
 	  else if (language_name == "język polski")
       {
-        language = Language::Singleton<Language::Polish>::instance();
+        //language = Language::Singleton<Language::Polish>::instance();
+          language = Language::Singleton<Language::English>::instance();
       }
       else
       {
@@ -409,18 +418,18 @@ namespace Crypto
     void get_language_list(std::vector<std::string> &languages)
     {
       std::vector<Language::Base*> language_instances({
-        Language::Singleton<Language::German>::instance(),
+        //Language::Singleton<Language::German>::instance(),
         Language::Singleton<Language::English>::instance(),
         Language::Singleton<Language::Spanish>::instance(),
-        Language::Singleton<Language::French>::instance(),
+        /*Language::Singleton<Language::French>::instance(),
         Language::Singleton<Language::Italian>::instance(),
-        Language::Singleton<Language::Dutch>::instance(),
-        Language::Singleton<Language::Portuguese>::instance(),
+        Language::Singleton<Language::Dutch>::instance(),*/
+        Language::Singleton<Language::Portuguese>::instance()/*,
         Language::Singleton<Language::Russian>::instance(),
         Language::Singleton<Language::Ukrainian>::instance(),
         Language::Singleton<Language::Polish>::instance(),
         Language::Singleton<Language::Japanese>::instance(),
-        Language::Singleton<Language::Chinese_Simplified>::instance()
+        Language::Singleton<Language::Chinese_Simplified>::instance()*/
       });
       for (std::vector<Language::Base*>::iterator it = language_instances.begin();
         it != language_instances.end(); it++)

@@ -29,7 +29,6 @@
 using namespace WalletGui;
 
 int main(int argc, char* argv[]) {
-
   QApplication app(argc, argv);
   app.setApplicationName(CurrencyAdapter::instance().getCurrencyName() + "wallet");
   app.setApplicationVersion(Settings::instance().getVersion());
@@ -52,7 +51,7 @@ int main(int argc, char* argv[]) {
       translator.load(":/languages/" + lng + ".qm");
       translatorQt.load(":/languages/qt_" + lng + ".qm");
 
-      if(lng == "uk") {
+      /*if(lng == "uk") {
             QLocale::setDefault(QLocale("uk_UA"));
         } else if(lng == "ru") {
             QLocale::setDefault(QLocale("ru_RU"));
@@ -62,7 +61,7 @@ int main(int argc, char* argv[]) {
             QLocale::setDefault(QLocale("be_BY"));
         } else if(lng == "de") {
             QLocale::setDefault(QLocale("de_DE"));
-        } else if(lng == "es") {
+        } else */if(lng == "es") {
             QLocale::setDefault(QLocale("es_ES"));
         } else {
             QLocale::setDefault(QLocale::c());
@@ -75,11 +74,6 @@ int main(int argc, char* argv[]) {
   }
   app.installTranslator(&translator);
   app.installTranslator(&translatorQt);
-
-  //QLocale::setDefault(QLocale::c());
-
-  //QLocale locale = QLocale("uk_UA");
-  //QLocale::setDefault(locale);
 
   setlocale(LC_ALL, "");
 
@@ -132,21 +126,15 @@ int main(int argc, char* argv[]) {
   app.processEvents();
   qRegisterMetaType<CryptoNote::TransactionId>("CryptoNote::TransactionId");
   qRegisterMetaType<quintptr>("quintptr");
-  bool nodeInit = false;
-  nodeInit = NodeAdapter::instance().init();
-  splash->finish(&MainWindow::instance());
-  if (!(nodeInit)) {
-    QString connection = Settings::instance().getConnection();
-    if(connection.compare("remote") == 0) {
-      QMessageBox::warning(nullptr, QObject::tr("Fail"), QObject::tr("Wallet node %1 is not responding. Please select another one on Wallet Nodes Frame, or select AUTO on Settings->Connection page to use a local blockchain.").arg(Settings::instance().getCurrentRemoteNode()));
-    } else {
-      return 0;
+    if (!NodeAdapter::instance().init()) {
+        return 0;
     }
-  }
+    splash->finish(&MainWindow::instance());
   Updater d;
   d.checkForUpdate();
 
   MainWindow::instance().show();
+
   WalletAdapter::instance().open("");
 
   QTimer::singleShot(10000, paymentServer, SLOT(uiReady()));

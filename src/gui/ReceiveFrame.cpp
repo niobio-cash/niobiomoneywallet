@@ -93,7 +93,7 @@ void ReceiveFrame::generatePaymentIdClicked() {
 }
 
 void ReceiveFrame::createRequestPaymentClicked() {
-  requestUri = "niobiocash:" + wallet_address;
+  requestUri = "q1v:" + wallet_address;
   if(CurrencyAdapter::instance().parseAmount(m_ui->m_requestAmountSpin->cleanText()) != 0){
     requestUri.append("?amount=" + m_ui->m_requestAmountSpin->cleanText());
   }

@@ -87,7 +87,7 @@ void Settings::load() {
   }
 
   if (!m_settings.contains(OPTION_REMOTE_NODE)) {
-    m_settings.insert(OPTION_REMOTE_NODE, "node0001.niobiocash.nl:8314");
+    m_settings.insert(OPTION_REMOTE_NODE, "remote-nbr-hydra.niobioco.in:8314");
   }
 
   if (!m_settings.contains(OPTION_DAEMON_PORT)) {
@@ -100,16 +100,7 @@ void Settings::load() {
 
   QStringList defaultPoolList;
   defaultPoolList
-  << "us-nbr.4miner.me:3334"
-  << "pool.niobiocash.nl:3334"
-  << "nbr.ciapool.com:3333"
-  << "nb.selvahost.com.br:3333"
-  << "niobiopool.com.br:3331"
-  << "niobio.ingest.cryptoknight.cc:5801"
-  << "nbr.sqhubpool.com:3333"
-  << "niobio.smartcoinpool.com:6436"
-  << "pool.nbr.easyhash.pro:3999"
-  << "stratum.niobiocash.com:4334";
+  << "pool.niobiocash.com:3333";
   //if (!m_settings.contains(OPTION_MINING_POOLS)) {
   setMiningPoolList(QStringList() << defaultPoolList);
   //} else {
@@ -123,9 +114,7 @@ void Settings::load() {
   //}
 
   QStringList defaultNodesList;
-  defaultNodesList << "remote-nbr-hydra.niobioco.in:8314"
-  << "remote-nbr-002.niobioco.in:8314"
-  << "node0001.niobiocash.nl:8314";
+  defaultNodesList << "remote-nbr-hydra.niobioco.in:8314";
   if (!m_settings.contains(OPTION_RPCNODES)) {
     setRpcNodesList(QStringList() << defaultNodesList);
   } else {
@@ -207,8 +196,11 @@ QDir Settings::getDataDir() const {
 }
 
 QString Settings::getWalletFile() const {
-  return m_settings.contains("walletFile") ? m_settings.value("walletFile").toString() :
-    getDataDir().absoluteFilePath(QCoreApplication::applicationName() + ".wallet");
+    if (m_settings.contains("walletFile")) {
+        return m_settings.value("walletFile").toString();
+    } else {
+        return getDataDir().absoluteFilePath(QCoreApplication::applicationName() + ".wallet");
+    }
 }
 
 QStringList Settings::getRecentWalletsList() const {
@@ -302,7 +294,7 @@ QString Settings::getCurrentRemoteNode() const {
     remotenode = m_settings.value(OPTION_REMOTE_NODE).toString();
   }
   else {
-    remotenode = "node0001.niobiocash.nl:8314";
+    remotenode = "remote-nbr-hydra.niobioco.in:8314";
   }
   return remotenode;
 }

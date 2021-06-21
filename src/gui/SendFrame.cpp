@@ -148,9 +148,9 @@ void SendFrame::amountValueChange() {
         }
         if (remote_node_fee > 1000000000) {
           remote_node_fee = 1000000000;
-          m_ui->m_remote_fee_value->setText(CurrencyAdapter::instance().formatAmount(remote_node_fee)  + " NBR");
+          m_ui->m_remote_fee_value->setText(CurrencyAdapter::instance().formatAmount(remote_node_fee)  + " Q1V");
         } else {
-          m_ui->m_remote_fee_value->setText(CurrencyAdapter::instance().formatAmount(remote_node_fee)  + " NBR (" + CurrencyAdapter::instance().formatPercent(SendFrame::remote_node_fee_percent) + "%)");
+          m_ui->m_remote_fee_value->setText(CurrencyAdapter::instance().formatAmount(remote_node_fee)  + " Q1V (" + CurrencyAdapter::instance().formatPercent(SendFrame::remote_node_fee_percent) + "%)");
         }
     }
 
@@ -230,16 +230,16 @@ void SendFrame::openUriClicked() {
 }
 
 void SendFrame::parsePaymentRequest(QString _request) {
-    if(_request.startsWith("niobiocash://", Qt::CaseInsensitive))
+    if(_request.startsWith("q1v://", Qt::CaseInsensitive))
     {
-       _request.replace(0, 13, "niobiocash:");
+       _request.replace(0, 13, "q1v:");
     }
-    if(!_request.startsWith("niobiocash:", Qt::CaseInsensitive)) {
-      QCoreApplication::postEvent(&MainWindow::instance(), new ShowMessageEvent(tr("Payment request should start with niobiocash:"), QtCriticalMsg));
+    if(!_request.startsWith("q1v:", Qt::CaseInsensitive)) {
+      QCoreApplication::postEvent(&MainWindow::instance(), new ShowMessageEvent(tr("Payment request should start with q1v:"), QtCriticalMsg));
       return;
     }
 
-    if(_request.startsWith("niobiocash:", Qt::CaseInsensitive))
+    if(_request.startsWith("q1v:", Qt::CaseInsensitive))
     {
       _request.remove(0, 11);
     }

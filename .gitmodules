@@ -1,7 +1,8 @@
-[submodule "libqrencode"]
-	path = libqrencode
+[submodule "external/libqrencode"]
+	path = external/libqrencode
 	url = https://github.com/fukuchi/libqrencode.git
-	branch = 3.4
-[submodule "cryptonote"]
-	path = cryptonote
-	url = https://github.com/niobio-cash/niobio-node-daemon
+	branch = master
+[submodule "external/quan-node"]
+	path = external/quan-node
+	url = https://github.com/quan-projects/quan-node.git
+	branch = develop

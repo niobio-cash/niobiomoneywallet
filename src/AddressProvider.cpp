@@ -29,7 +29,7 @@ void AddressProvider::getAddress(const QString& _urlString) {
   }
   auto now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
   QNetworkRequest request(url);
-  request.setAttribute(QNetworkRequest::User, now);
+  request.setAttribute(QNetworkRequest::User, QVariant::fromValue(now));
   QNetworkReply* reply = m_networkManager.get(request);
   connect(reply, &QNetworkReply::readyRead, this, &AddressProvider::readyRead);
   connect(reply, &QNetworkReply::finished, reply, &QNetworkReply::deleteLater);

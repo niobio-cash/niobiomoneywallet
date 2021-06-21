@@ -1,4 +1,4 @@
-IDI_ICON1               ICON    "images\\niobiocash.ico"
+IDI_ICON1               ICON    "images\\logo4.ico"
 
 #include <windows.h>
 
@@ -6,11 +6,11 @@ IDI_ICON1               ICON    "images\\niobiocash.ico"
 #define VER_FILEVERSION_STR         "1.0.0.3\0"
 #define VER_PRODUCTVERSION          1,3,7
 #define VER_PRODUCTVERSION_STR      "1.3.7\0"
-#define VER_FILEDESCRIPTION_STR     "Niobio"
-#define VER_INTERNALNAME_STR        "Niobio"
-#define VER_LEGALCOPYRIGHT_STR      "Copyright (C) 2017-2019, Niobio Cash Developers"
-#define VER_ORIGINALFILENAME_STR    "Niobio.exe"
-#define VER_PRODUCTNAME_STR         "Niobio"
+#define VER_FILEDESCRIPTION_STR     "Asset QUAN - First Version wallet"
+#define VER_INTERNALNAME_STR        "Asset QUAN - First Version wallet"
+#define VER_LEGALCOPYRIGHT_STR      "Copyright (C) 2017-2019, Quan Project Developers"
+#define VER_ORIGINALFILENAME_STR    "q1v-wallet.exe"
+#define VER_PRODUCTNAME_STR         "Asset QUAN - First Version wallet"
 
 VS_VERSION_INFO VERSIONINFO
 FILEVERSION     VER_FILEVERSION

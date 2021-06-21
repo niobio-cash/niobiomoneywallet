@@ -1,0 +1,11 @@
+commit {
+    :up: rebrand
+    :recycle: Refactoring
+    :information_source: Information
+    :book: Documentation
+    :construction_worker: Build
+}
+
+tag {
+    :+1: add
+}
