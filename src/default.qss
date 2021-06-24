@@ -1,5 +1,5 @@
 * {
-    border-color: rgba(43, 43, 43, 1);
+    /*border-color: rgba(43, 43, 43, 1);*/
     font-size: 13px;
     alternate-background-color: transparent;
 }
@@ -52,14 +52,18 @@ QMdiArea {
     /*alternate-background-color: #3c3f41;*/
     background-color: rgba(40,42,54, 0.9);
 }
+QMainWindow, QMenuBar, QWidget, QFrame, QDialog {
+font-family: "Inter";
+    font-size: 14px;
+}
 QAbstractItemView {
     border: none;
     border-top: 1px solid rgba(43, 43, 43, 1);
 }
 QAbstractItemView,
 QTreeView * {
-    background: #3c3f41;
-    background-color: #3c3f41;
+    background-color: rgba(40,42,54, 0.9);
+    /*background-color: #3c3f41;*/
     font-size: 13px;
     selection-background-color: #2f65ca;
     selection-color: #bbbbbb;
@@ -740,8 +744,9 @@ QToolTip {
 QToolBar {
     border: none;
     color: #888;
-    background: #3c3f41;
-    font-size: 11px;
+    font-family: "Inter";
+    /*background: #3c3f41;*/
+    background-color:#282A36;
 }
 QToolBar#accountToolBar {
 	border: 0; min-height: 71px;
@@ -777,7 +782,9 @@ QToolBar#toolBar QToolButton{
 QStatusBar {
     border-top: 1px solid #27292a;
     /*background-color: #282a36;*/
+    background-color: #3C3F41;
     color: #ffb86c;
+    font-family: "Roboto Mono";
 }
 
 QStatusBar::item {
@@ -788,6 +795,7 @@ QStatusBar QLabel{
     background: transparent;
     margin: 0  4px;
     border: 0;
+    font-size: 12px;
 }
 QStatusBar QPushButton,
 QStatusBar QPushButton:focus,
@@ -818,23 +826,24 @@ background-color: transparent;
 QLabel#totalBalance,
 QLabel#m_totalBalanceLabel,
 QLabel#m_pendingBalanceLabel,
-QLabel#m_actualBalanceLabel {
+QLabel#m_actualBalanceLabel,
+QLabel#m_amountLabel {
 font-family: 'quan-project';
 }
 
-QFrame#m_accountFrame {
+QWidget#centralwidget{
 background-color: rgba(40,42,54, 0.9);
 }
-QLabel#m_addressLabel {
-    font-size: 12px;
-}
+
 QFrame#m_accountFrame * {
     background: transparent;
 	color: #f8f8f2;
 	border: 0;
 }
-QFrame#m_accountFrame QLineEdit#m_addressEdit {
-	padding: 0;
+QFrame#m_accountFrame QLabel#m_addressLabel {
+	font-family: 'M+ 1m';
+	font-size: 12px;
+	padding: 4px;
 	height: 25px;
 }
 QFrame#m_accountFrame QToolButton#m_copyButton,
@@ -848,3 +857,11 @@ QFrame#m_accountFrame QLabel#totalBalance {
 QFrame#m_accountFrame QLabel#addressStatusLabel {
 	color: #5813ae;
 }
+QFrame#TransactionFrame {
+padding: 4px;
+}
+QLabel#m_iconLabel {
+background: transparent;
+color: #fff;
+}
+
