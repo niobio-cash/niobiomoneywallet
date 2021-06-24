@@ -87,7 +87,7 @@ void Settings::load() {
   }
 
   if (!m_settings.contains(OPTION_REMOTE_NODE)) {
-    m_settings.insert(OPTION_REMOTE_NODE, "remote-nbr-hydra.niobioco.in:8314");
+    m_settings.insert(OPTION_REMOTE_NODE, "remote-001.quan-project.com:8314");
   }
 
   if (!m_settings.contains(OPTION_DAEMON_PORT)) {
@@ -114,7 +114,7 @@ void Settings::load() {
   //}
 
   QStringList defaultNodesList;
-  defaultNodesList << "remote-nbr-hydra.niobioco.in:8314";
+  defaultNodesList << "remote-001.quan-project.com:8314";
   if (!m_settings.contains(OPTION_RPCNODES)) {
     setRpcNodesList(QStringList() << defaultNodesList);
   } else {
@@ -294,7 +294,7 @@ QString Settings::getCurrentRemoteNode() const {
     remotenode = m_settings.value(OPTION_REMOTE_NODE).toString();
   }
   else {
-    remotenode = "remote-nbr-hydra.niobioco.in:8314";
+    remotenode = "remote-001.quan-project.com:8314";
   }
   return remotenode;
 }
