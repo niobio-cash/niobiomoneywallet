@@ -810,40 +810,41 @@ QStatusBar QLineEdit, QStatusBar QLineEdit:focus {
     selection-background-color: #282a36;
     selection-color: #ffffff;
 }
-#m_overviewFrame,
-#m_overviewFrame QLabel {
+QFrame#m_overviewFrame,
+QFrame#m_overviewFrame QLabel {
 background-color: transparent;
 }
 
-#totalBalance,
-#m_totalBalanceLabel,
-#m_pendingBalanceLabel,
-#m_actualBalanceLabel {
+QLabel#totalBalance,
+QLabel#m_totalBalanceLabel,
+QLabel#m_pendingBalanceLabel,
+QLabel#m_actualBalanceLabel {
 font-family: 'quan-project';
 }
 
-#m_accountFrame {
+QFrame#m_accountFrame {
 background-color: rgba(40,42,54, 0.9);
 }
-#m_addressLabel {
+QLabel#m_addressLabel {
     font-size: 12px;
 }
-#m_accountFrame * {
+QFrame#m_accountFrame * {
     background: transparent;
 	color: #f8f8f2;
 	border: 0;
 }
-#m_accountFrame #m_addressEdit {
+QFrame#m_accountFrame QLineEdit#m_addressEdit {
 	padding: 0;
 	height: 25px;
 }
-#m_accountFrame #m_copyButton, #m_accountFrame #m_qrButton {
+QFrame#m_accountFrame QToolButton#m_copyButton,
+QFrame#m_accountFrame QToolButton#m_qrButton {
 	margin: 0;
 	padding: 0;
 }
-#m_accountFrame #totalBalance {
+QFrame#m_accountFrame QLabel#totalBalance {
 	color: #f8f8f2;
 }
-#m_accountFrame #addressStatusLabel {
+QFrame#m_accountFrame QLabel#addressStatusLabel {
 	color: #5813ae;
 }
