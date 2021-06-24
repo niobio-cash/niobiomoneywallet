@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <QDnsLookup>
-#include <QHostAddress>
+//#include <QHostAddress>
 #include <QUrl>
 #include <QDebug>
 
@@ -14,8 +14,7 @@ namespace WalletGui {
 DnsManager::DnsManager(QObject *parent) : QObject(parent), m_dns() {
 }
 
-DnsManager::~DnsManager() {
-}
+DnsManager::~DnsManager() = default;
 
 void DnsManager::getAddresses(const QString& _urlString) {
   m_dns = new QDnsLookup(this);

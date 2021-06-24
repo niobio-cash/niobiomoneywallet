@@ -45,7 +45,7 @@
     <qresource prefix="/images">
         <file alias="splash">images/splash.png</file>
         <file alias="cryptonote">images/logo5.png</file>
-        <file alias="coin">images/logo6.png</file>
+        <file alias="brand">images/logo6.png</file>
         <file alias="clock">images/clock.gif</file>
         <file alias="handle.png">images/handle.png</file>
 	<file alias="logo1.png">images/logo1.png</file>
@@ -58,6 +58,7 @@
         <file>languages/pt.qm</file>
     </qresource>
     <qresource prefix="/fonts">
-        <file alias="mplusm">fonts/mplus-1m-medium.ttf</file>
+        <file alias="robotomono">fonts/robotomono-regular.ttf</file>
+        <file alias="quan">fonts/quan-project-webfont.ttf</file>
     </qresource>
 </RCC>

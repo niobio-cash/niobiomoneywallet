@@ -21,6 +21,7 @@
 #include "gui/MainWindow.h"
 #include "Update.h"
 #include <QTextCodec>
+#include <QFontDatabase>
 #include "PaymentServer.h"
 #include "WalletNodes.h"
 
@@ -28,11 +29,22 @@
 
 using namespace WalletGui;
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "-Wclazy-qt-macros"
 int main(int argc, char* argv[]) {
   QApplication app(argc, argv);
   app.setApplicationName(CurrencyAdapter::instance().getCurrencyName() + "wallet");
   app.setApplicationVersion(Settings::instance().getVersion());
   app.setQuitOnLastWindowClosed(false);
+
+    QFontDatabase::addApplicationFont(":/fonts/robotomono");
+    QFontDatabase::addApplicationFont(":/fonts/quan");
+
+    /*QFontDatabase db;
+    for(int i=0; i<db.families().size(); i++)
+    {
+        qDebug() << db.families().at(i);
+    }*/
 
 #ifndef Q_OS_MAC
   QApplication::setStyle(QStyleFactory::create("Fusion"));
@@ -116,11 +128,14 @@ int main(int argc, char* argv[]) {
   SignalHandler::instance().init();
   QObject::connect(&SignalHandler::instance(), &SignalHandler::quitSignal, &app, &QApplication::quit);
 
+    /*QFont monospace("Roboto Mono");
+    monospace.setPixelSize(12);*/
+
   QSplashScreen* splash = new QSplashScreen(QPixmap(":images/splash"), /*Qt::WindowStaysOnTopHint |*/ Qt::X11BypassWindowManagerHint);
   if (!splash->isVisible()) {
     splash->show();
   }
-
+  //splash->setFont(monospace);
   splash->showMessage(QObject::tr("Loading blockchain..."), Qt::AlignLeft | Qt::AlignBottom, Qt::white);
 
   app.processEvents();
@@ -151,3 +166,4 @@ int main(int argc, char* argv[]) {
 
   return app.exec();
 }
+#pragma clang diagnostic pop

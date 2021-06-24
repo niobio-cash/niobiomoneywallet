@@ -14,8 +14,8 @@ class DnsManager : public QObject {
   Q_OBJECT
 
 public:
-  DnsManager(QObject *parent);
-  ~DnsManager();
+  explicit DnsManager(QObject *parent);
+  ~DnsManager() override;
 
   void getAddresses(const QString& _urlString);
 
@@ -24,7 +24,7 @@ public slots:
 
 private:
   QDnsLookup *m_dns;
-  QStringList Records;
+  //QStringList Records;
 
 Q_SIGNALS:
   void aliasFoundSignal(const QString& _name, const QString& _address);
