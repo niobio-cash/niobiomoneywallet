@@ -25,8 +25,7 @@ public:
 
   void start(quint32 _coreCount);
   void stop();
-
-    __attribute__((unused)) bool isRunning() const;
+  bool isRunning() const;
 
   QString getPoolHost() const;
   quint16 getPoolPort() const;

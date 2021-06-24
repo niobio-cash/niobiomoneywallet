@@ -58,7 +58,7 @@ public:
   void peerCountUpdated(Node& _node, size_t _count) Q_DECL_OVERRIDE;
   void localBlockchainUpdated(Node& _node, uint64_t _height) Q_DECL_OVERRIDE;
   void lastKnownBlockHeightUpdated(Node& _node, uint64_t _height) Q_DECL_OVERRIDE;
-  void startSoloMining(const QString& _address, size_t _threads_count);
+  void startSoloMining(QString _address, size_t _threads_count);
   void stopSoloMining();
   quint64 getSpeed() const;
 
@@ -71,8 +71,8 @@ private:
   ~NodeAdapter();
 
   bool initInProcessNode();
-  static CryptoNote::CoreConfig makeCoreConfig() ;
-  static CryptoNote::NetNodeConfig makeNetNodeConfig() ;
+  CryptoNote::CoreConfig makeCoreConfig() const;
+  CryptoNote::NetNodeConfig makeNetNodeConfig() const;
 
 Q_SIGNALS:
   void localBlockchainUpdatedSignal(quint64 _height);

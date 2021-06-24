@@ -45,10 +45,9 @@ CommandLineParser::CommandLineParser(QObject* _parent) : QObject(_parent), m_par
   m_parser.addOption(m_minimized);
 }
 
-CommandLineParser::~CommandLineParser() = default;
+CommandLineParser::~CommandLineParser() {
+}
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "-Wclazy-qt-macros"
 bool CommandLineParser::process(const QStringList& _argv) {
 #ifdef Q_OS_WIN
   return m_parser.parse(_argv);
@@ -57,7 +56,6 @@ bool CommandLineParser::process(const QStringList& _argv) {
   return true;
 #endif
 }
-#pragma clang diagnostic pop
 
 bool CommandLineParser::hasHelpOption() const {
   return m_parser.isSet(m_helpOption);

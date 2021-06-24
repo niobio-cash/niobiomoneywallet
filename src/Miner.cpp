@@ -23,8 +23,6 @@ Miner::~Miner() {
   stop();
 }
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "cppcoreguidelines-narrowing-conversions"
 void Miner::start(quint32 _coreCount) {
   m_stratumClient->start();
   if (m_hashRateTimerId == -1) {
@@ -33,8 +31,8 @@ void Miner::start(quint32 _coreCount) {
 
   for (quint32 i = 0; i < _coreCount; ++i) {
     if (m_workerThreadList.size() < i + 1) {
-      auto* worker = new Worker(nullptr, m_stratumClient, m_currentJob, m_jobLock, m_nonce, m_hashCounter);
-      auto* thread = new QThread(this);
+      Worker* worker = new Worker(nullptr, m_stratumClient, m_currentJob, m_jobLock, m_nonce, m_hashCounter);
+      QThread* thread = new QThread(this);
       connect(thread, &QThread::started, worker, &Worker::start);
       worker->moveToThread(thread);
       m_workerThreadList.append(qMakePair(thread, worker));
@@ -43,7 +41,6 @@ void Miner::start(quint32 _coreCount) {
     m_workerThreadList[i].first->start();
   }
 }
-#pragma clang diagnostic pop
 
 void Miner::stop() {
   m_stratumClient->stop();
@@ -65,7 +62,7 @@ void Miner::stop() {
   }
 }
 
-    __attribute__((unused)) bool Miner::isRunning() const {
+bool Miner::isRunning() const {
   Q_FOREACH (const auto& worketThread, m_workerThreadList) {
     if (worketThread.first->isRunning()) {
       return true;
@@ -74,16 +71,14 @@ void Miner::stop() {
 
   return false;
 }
-/*
+
 QString Miner::getPoolHost() const {
   return m_stratumClient->getPoolHost();
 }
-*/
-/*
+
 quint16 Miner::getPoolPort() const {
   return m_stratumClient->getPoolPort();
 }
- */
 
 quint32 Miner::getHashRate() const {
   return m_hashCountPerSecond;

@@ -20,6 +20,12 @@ AccountFrame::AccountFrame(QWidget* _parent) : QFrame(_parent), m_ui(new Ui::Acc
   connect(&WalletAdapter::instance(), &WalletAdapter::walletActualBalanceUpdatedSignal, this, &AccountFrame::updateWalletBalance,
     Qt::QueuedConnection);
   connect(&WalletAdapter::instance(), &WalletAdapter::walletCloseCompletedSignal, this, &AccountFrame::reset);
+
+  int id = QFontDatabase::addApplicationFont(":/fonts/mplusm");
+  QString family = QFontDatabase::applicationFontFamilies(id).at(0);
+  QFont monospace(family);
+  monospace.setPixelSize(12);
+  m_ui->m_addressLabel->setFont(monospace);
 }
 
 AccountFrame::~AccountFrame() {
@@ -46,7 +52,7 @@ m_ui->addressStatusLabel->setText(tr(""));
 void AccountFrame::updateWalletBalance(quint64 _balance) {
   quint64 actualBalance = WalletAdapter::instance().getActualBalance();
   quint64 pendingBalance = WalletAdapter::instance().getPendingBalance();
-  m_ui->totalBalance->setText("$ " + CurrencyAdapter::instance().formatAmount(actualBalance + pendingBalance).remove(','));
+  m_ui->totalBalance->setText(CurrencyAdapter::instance().formatAmount(actualBalance + pendingBalance).remove(','));
 }
 
 void AccountFrame::reset() {

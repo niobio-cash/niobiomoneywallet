@@ -28,7 +28,8 @@ void LoggerAdapter::init() {
 LoggerAdapter::LoggerAdapter() : m_logManager() {
 }
 
-LoggerAdapter::~LoggerAdapter() = default;
+LoggerAdapter::~LoggerAdapter() {
+}
 
 Logging::LoggerManager& LoggerAdapter::getLoggerManager() {
   return m_logManager;

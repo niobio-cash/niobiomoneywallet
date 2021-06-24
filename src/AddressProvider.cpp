@@ -9,7 +9,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QNetworkReply>
-//#include <QStringList>
+#include <QStringList>
 #include <QUrl>
 
 #include "AddressProvider.h"
@@ -19,7 +19,8 @@ namespace WalletGui {
 AddressProvider::AddressProvider(QObject *parent) : QObject(parent), m_networkManager() {
 }
 
-AddressProvider::~AddressProvider() = default;
+AddressProvider::~AddressProvider() {
+}
 
 void AddressProvider::getAddress(const QString& _urlString) {
   QUrl url = QUrl::fromUserInput(_urlString);
@@ -35,7 +36,7 @@ void AddressProvider::getAddress(const QString& _urlString) {
 }
 
 void AddressProvider::readyRead() {
-  auto* reply = qobject_cast<QNetworkReply*>(sender());
+  QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
   QByteArray data = reply->readAll();
   QVariant field = reply->request().attribute(QNetworkRequest::User);
   bool ok;

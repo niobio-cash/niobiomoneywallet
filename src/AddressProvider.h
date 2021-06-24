@@ -16,8 +16,8 @@ class AddressProvider : public QObject {
   Q_OBJECT
 
 public:
-  explicit AddressProvider(QObject *parent);
-  ~AddressProvider() override;
+  AddressProvider(QObject *parent);
+  ~AddressProvider();
   void getAddress(const QString& _urlString);
 
 private:

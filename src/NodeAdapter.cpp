@@ -5,7 +5,7 @@
 
 #include <QCoreApplication>
 #include <QDateTime>
-//#include <QDir>
+#include <QDir>
 #include <QTimer>
 #include <QUrl>
 
@@ -42,15 +42,16 @@ namespace WalletGui {
 
         void nodeInitCompletedSignal();
 
-        void nodeInitFailedSignal(int _t1);
+        void nodeInitFailedSignal(int _errorCode);
 
         void nodeDeinitCompletedSignal();
 
     public:
-        explicit InProcessNodeInitializer(__attribute__((unused)) QObject *_parent = nullptr) {
+        InProcessNodeInitializer(QObject *_parent = nullptr) {
         }
 
-        ~InProcessNodeInitializer() override = default;
+        ~InProcessNodeInitializer() {
+        }
 
         void start(Node **_node, const CryptoNote::Currency *currency, INodeCallback *_callback,
                    Logging::LoggerManager *_loggerManager,
@@ -78,7 +79,7 @@ namespace WalletGui {
             Q_EMIT nodeDeinitCompletedSignal();
         }
 
-        static void stop(Node **_node) {
+        void stop(Node **_node) {
             Q_CHECK_PTR(*_node);
             (*_node)->deinit();
         }
@@ -104,7 +105,8 @@ namespace WalletGui {
                 Qt::QueuedConnection);
     }
 
-    NodeAdapter::~NodeAdapter() = default;
+    NodeAdapter::~NodeAdapter() {
+    }
 
     quintptr NodeAdapter::getPeerCount() {
         Q_ASSERT(m_node != nullptr);
@@ -147,8 +149,8 @@ namespace WalletGui {
             initTimer.setInterval(3000);
             initTimer.setSingleShot(true);
             initTimer.start();
-            m_node->init([](std::error_code _err) {
-                Q_UNUSED(_err)
+            m_node->init([this](std::error_code _err) {
+                Q_UNUSED(_err);
             });
             QEventLoop waitLoop;
             connect(&initTimer, &QTimer::timeout, &waitLoop, &QEventLoop::quit);
@@ -169,8 +171,8 @@ namespace WalletGui {
             initTimer.setInterval(10000);
             initTimer.setSingleShot(true);
             initTimer.start();
-            m_node->init([](std::error_code _err) {
-                Q_UNUSED(_err)
+            m_node->init([this](std::error_code _err) {
+                Q_UNUSED(_err);
             });
             QEventLoop waitLoop;
             connect(&initTimer, &QTimer::timeout, &waitLoop, &QEventLoop::quit);
@@ -190,8 +192,8 @@ namespace WalletGui {
             initTimer.setInterval(3000);
             initTimer.setSingleShot(true);
             initTimer.start();
-            m_node->init([](std::error_code _err) {
-                Q_UNUSED(_err)
+            m_node->init([this](std::error_code _err) {
+                Q_UNUSED(_err);
             });
             QEventLoop waitLoop;
             connect(&initTimer, &QTimer::timeout, &waitLoop, &QEventLoop::quit);
@@ -245,10 +247,10 @@ namespace WalletGui {
         return m_node->getAltBlocksCount();
     }
 
-    /*quint64 NodeAdapter::getConnectionsCount() {
+    quint64 NodeAdapter::getConnectionsCount() {
         Q_CHECK_PTR(m_node);
         return m_node->getConnectionsCount();
-    }*/
+    }
 
     quint64 NodeAdapter::getOutgoingConnectionsCount() {
         Q_CHECK_PTR(m_node);
@@ -279,21 +281,21 @@ namespace WalletGui {
     }
 
     void NodeAdapter::peerCountUpdated(Node &_node, size_t _count) {
-        Q_UNUSED(_node)
+        Q_UNUSED(_node);
         Q_EMIT peerCountUpdatedSignal(_count);
     }
 
     void NodeAdapter::localBlockchainUpdated(Node &_node, uint64_t _height) {
-        Q_UNUSED(_node)
+        Q_UNUSED(_node);
         Q_EMIT localBlockchainUpdatedSignal(_height);
     }
 
     void NodeAdapter::lastKnownBlockHeightUpdated(Node &_node, uint64_t _height) {
-        Q_UNUSED(_node)
+        Q_UNUSED(_node);
         Q_EMIT lastKnownBlockHeightUpdatedSignal(_height);
     }
 
-    void NodeAdapter::startSoloMining(const QString& _address, size_t _threads_count) {
+    void NodeAdapter::startSoloMining(QString _address, size_t _threads_count) {
         Q_CHECK_PTR(m_node);
         m_node->startMining(_address.toStdString(), _threads_count);
     }
@@ -330,7 +332,7 @@ namespace WalletGui {
     void NodeAdapter::deinit() {
         if (m_node != nullptr) {
             if (m_nodeInitializerThread.isRunning()) {
-                WalletGui::InProcessNodeInitializer::stop(&m_node);
+                m_nodeInitializer->stop(&m_node);
                 QEventLoop waitLoop;
                 connect(m_nodeInitializer, &InProcessNodeInitializer::nodeDeinitCompletedSignal, &waitLoop,
                         &QEventLoop::quit, Qt::QueuedConnection);
@@ -344,7 +346,7 @@ namespace WalletGui {
         }
     }
 
-    CryptoNote::CoreConfig NodeAdapter::makeCoreConfig() {
+    CryptoNote::CoreConfig NodeAdapter::makeCoreConfig() const {
         CryptoNote::CoreConfig config;
         boost::program_options::variables_map options;
         boost::any dataDir = std::string(Settings::instance().getDataDir().absolutePath().toLocal8Bit().data());
@@ -353,7 +355,7 @@ namespace WalletGui {
         return config;
     }
 
-    CryptoNote::NetNodeConfig NodeAdapter::makeNetNodeConfig() {
+    CryptoNote::NetNodeConfig NodeAdapter::makeNetNodeConfig() const {
         CryptoNote::NetNodeConfig config;
         boost::program_options::variables_map options;
         boost::any p2pBindIp = Settings::instance().getP2pBindIp().toStdString();
@@ -400,7 +402,7 @@ namespace WalletGui {
         }
 
         options.insert(std::make_pair("data-dir", boost::program_options::variable_value(dataDir, false)));
-        //int size = options.size();
+        int size = options.size();
         config.init(options);
         config.setTestnet(Settings::instance().isTestnet());
         return config;
