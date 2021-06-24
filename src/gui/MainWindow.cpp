@@ -73,7 +73,7 @@ MainWindow::MainWindow() : QMainWindow(), m_ui(new Ui::MainWindow), m_trayIcon(n
   m_ui->setupUi(this);
   m_connectionStateIconLabel = new QPushButton();
   m_connectionStateIconLabel->setFlat(true); // Make the button look like a label, but clickable
-  m_connectionStateIconLabel->setStyleSheet(".QPushButton { background-color: rgba(255, 255, 255, 0);}");
+  //m_connectionStateIconLabel->setStyleSheet(".QPushButton { background-color: rgba(255, 255, 255, 0);}");
   m_connectionStateIconLabel->setMaximumSize(16, 16);
   m_encryptionStateIconLabel = new QLabel(this);
   m_trackingModeIconLabel = new QLabel(this);

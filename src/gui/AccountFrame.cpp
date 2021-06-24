@@ -14,50 +14,44 @@
 
 namespace WalletGui {
 
-AccountFrame::AccountFrame(QWidget* _parent) : QFrame(_parent), m_ui(new Ui::AccountFrame) {
-  m_ui->setupUi(this);
-  connect(&WalletAdapter::instance(), &WalletAdapter::updateWalletAddressSignal, this, &AccountFrame::updateWalletAddress);
-  connect(&WalletAdapter::instance(), &WalletAdapter::walletActualBalanceUpdatedSignal, this, &AccountFrame::updateWalletBalance,
-    Qt::QueuedConnection);
-  connect(&WalletAdapter::instance(), &WalletAdapter::walletCloseCompletedSignal, this, &AccountFrame::reset);
+    AccountFrame::AccountFrame(QWidget* _parent) : QFrame(_parent), m_ui(new Ui::AccountFrame) {
+        m_ui->setupUi(this);
+        connect(&WalletAdapter::instance(), &WalletAdapter::updateWalletAddressSignal, this, &AccountFrame::updateWalletAddress);
+        connect(&WalletAdapter::instance(), &WalletAdapter::walletActualBalanceUpdatedSignal, this, &AccountFrame::updateWalletBalance,
+                Qt::QueuedConnection);
+        connect(&WalletAdapter::instance(), &WalletAdapter::walletCloseCompletedSignal, this, &AccountFrame::reset);
+    }
 
-  int id = QFontDatabase::addApplicationFont(":/fonts/mplusm");
-  QString family = QFontDatabase::applicationFontFamilies(id).at(0);
-  QFont monospace(family);
-  monospace.setPixelSize(12);
-  m_ui->m_addressLabel->setFont(monospace);
-}
+    AccountFrame::~AccountFrame() {
+    }
 
-AccountFrame::~AccountFrame() {
-}
+    void AccountFrame::updateWalletAddress(const QString& _address) {
+        m_ui->m_addressLabel->setText(_address);
+    }
 
-void AccountFrame::updateWalletAddress(const QString& _address) {
-  m_ui->m_addressLabel->setText(_address);
-}
+    void AccountFrame::copyAddress() {
+        QApplication::clipboard()->setText(m_ui->m_addressLabel->text());
+        m_ui->addressStatusLabel->setText(tr("Copied to clipboard"));
+        QTimer::singleShot(1500,this,SLOT(clearLabel()));
+    }
 
-void AccountFrame::copyAddress() {
-  QApplication::clipboard()->setText(m_ui->m_addressLabel->text());
-  m_ui->addressStatusLabel->setText(tr("Copied to clipboard"));
-  QTimer::singleShot(1500,this,SLOT(clearLabel()));
-}
+    void AccountFrame::showQR() {
+        Q_EMIT showQRcodeSignal();
+    }
 
-void AccountFrame::showQR() {
-  Q_EMIT showQRcodeSignal();
-}
+    void AccountFrame::clearLabel() {
+        m_ui->addressStatusLabel->setText(tr(""));
+    }
 
-void AccountFrame::clearLabel() {
-m_ui->addressStatusLabel->setText(tr(""));
-}
+    void AccountFrame::updateWalletBalance(quint64 _balance) {
+        quint64 actualBalance = WalletAdapter::instance().getActualBalance();
+        quint64 pendingBalance = WalletAdapter::instance().getPendingBalance();
+        m_ui->totalBalance->setText("$ " + CurrencyAdapter::instance().formatAmount(actualBalance + pendingBalance).remove(','));
+    }
 
-void AccountFrame::updateWalletBalance(quint64 _balance) {
-  quint64 actualBalance = WalletAdapter::instance().getActualBalance();
-  quint64 pendingBalance = WalletAdapter::instance().getPendingBalance();
-  m_ui->totalBalance->setText(CurrencyAdapter::instance().formatAmount(actualBalance + pendingBalance).remove(','));
-}
-
-void AccountFrame::reset() {
-  m_ui->m_addressLabel->clear();
-  updateWalletBalance(0);
-}
+    void AccountFrame::reset() {
+        m_ui->m_addressLabel->clear();
+        updateWalletBalance(0);
+    }
 
 }
