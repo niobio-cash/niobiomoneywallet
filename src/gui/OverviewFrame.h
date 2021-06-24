@@ -1,38 +1,104 @@
 // Copyright (c) 2011-2015 The Cryptonote developers
+// Copyright (c) 2016 - 2019 Niobio Cash developers - Derived work from -Karbowanec-
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#pragma once
+#include "CurrencyAdapter.h"
+#include "OverviewFrame.h"
+#include "TransactionFrame.h"
+#include "RecentTransactionsModel.h"
+#include "WalletAdapter.h"
 
-#include <QFrame>
-#include <QStyledItemDelegate>
-
-namespace Ui {
-class OverviewFrame;
-}
+#include "ui_overviewframe.h"
 
 namespace WalletGui {
 
-class RecentTransactionsModel;
+    class RecentTransactionsDelegate : public QStyledItemDelegate {
+    Q_OBJECT
 
-class OverviewFrame : public QFrame {
-  Q_OBJECT
-  Q_DISABLE_COPY(OverviewFrame)
+    public:
+        RecentTransactionsDelegate(QObject* _parent) : QStyledItemDelegate(_parent) {
+        }
 
-public:
-  OverviewFrame(QWidget* _parent);
-  ~OverviewFrame();
+        ~RecentTransactionsDelegate() {
+        }
 
-private:
-  QScopedPointer<Ui::OverviewFrame> m_ui;
-  QSharedPointer<RecentTransactionsModel> m_transactionModel;
+        QWidget* createEditor(QWidget* _parent, const QStyleOptionViewItem& _option, const QModelIndex& _index) const Q_DECL_OVERRIDE {
+            if (!_index.isValid()) {
+                return nullptr;
+            }
 
-  void transactionsInserted(const QModelIndex& _parent, int _first, int _last);
-  void transactionsRemoved(const QModelIndex& _parent, int _first, int _last);
-  void layoutChanged();
-  void updateActualBalance(quint64 _balance);
-  void updatePendingBalance(quint64 _balance);
-  void reset();
-};
+            return new TransactionFrame(_index, _parent);
+        }
+
+        QSize sizeHint(const QStyleOptionViewItem& _option, const QModelIndex& _index) const Q_DECL_OVERRIDE {
+            return QSize(346, 64);
+        }
+    };
+
+    OverviewFrame::OverviewFrame(QWidget* _parent) : QFrame(_parent), m_ui(new Ui::OverviewFrame), m_transactionModel(new RecentTransactionsModel) {
+        m_ui->setupUi(this);
+        connect(&WalletAdapter::instance(), &WalletAdapter::walletActualBalanceUpdatedSignal, this, &OverviewFrame::updateActualBalance,
+                Qt::QueuedConnection);
+        connect(&WalletAdapter::instance(), &WalletAdapter::walletPendingBalanceUpdatedSignal, this, &OverviewFrame::updatePendingBalance,
+                Qt::QueuedConnection);
+        connect(&WalletAdapter::instance(), &WalletAdapter::walletCloseCompletedSignal, this, &OverviewFrame::reset,
+                Qt::QueuedConnection);
+        connect(m_transactionModel.data(), &QAbstractItemModel::rowsInserted, this, &OverviewFrame::transactionsInserted);
+        connect(m_transactionModel.data(), &QAbstractItemModel::layoutChanged, this, &OverviewFrame::layoutChanged);
+
+        //==========
+        /*QFont monospace("quan-project");
+        monospace.setPixelSize(12);
+
+        m_ui->m_actualBalanceLabel->setFont(monospace);*/
+        //==========
+
+
+        m_ui->m_recentTransactionsView->setItemDelegate(new RecentTransactionsDelegate(this));
+        m_ui->m_recentTransactionsView->setModel(m_transactionModel.data());
+        reset();
+    }
+
+    OverviewFrame::~OverviewFrame() {
+    }
+
+    void OverviewFrame::transactionsInserted(const QModelIndex& _parent, int _first, int _last) {
+        for (quint32 i = _first; i <= _last; ++i) {
+            QModelIndex recentModelIndex = m_transactionModel->index(i, 0);
+            m_ui->m_recentTransactionsView->openPersistentEditor(recentModelIndex);
+        }
+    }
+
+    void OverviewFrame::layoutChanged() {
+        for (quint32 i = 0; i <= m_transactionModel->rowCount(); ++i) {
+            QModelIndex recent_index = m_transactionModel->index(i, 0);
+            m_ui->m_recentTransactionsView->openPersistentEditor(recent_index);
+        }
+    }
+
+    void OverviewFrame::updateActualBalance(quint64 _balance) {
+        quint64 pendingBalance = WalletAdapter::instance().getPendingBalance();
+        m_ui->m_actualBalanceLabel->setText("$ " + CurrencyAdapter::instance().formatAmount(_balance).remove(','));
+        m_ui->m_actualBalanceLabel->setAlignment(Qt::AlignLeft);
+        m_ui->m_totalBalanceLabel->setText(
+                "$ " + CurrencyAdapter::instance().formatAmount(_balance + pendingBalance).remove(','));
+        m_ui->m_actualBalanceLabel->setAlignment(Qt::AlignLeft);
+    }
+
+    void OverviewFrame::updatePendingBalance(quint64 _balance) {
+        m_ui->m_pendingBalanceLabel->setText("$ " + CurrencyAdapter::instance().formatAmount(_balance).remove(','));
+        m_ui->m_pendingBalanceLabel->setAlignment(Qt::AlignRight);
+        quint64 actualBalance = WalletAdapter::instance().getActualBalance();
+        m_ui->m_totalBalanceLabel->setText("$ " + CurrencyAdapter::instance().formatAmount(_balance + actualBalance).remove(','));
+        m_ui->m_totalBalanceLabel->setAlignment(Qt::AlignRight);
+    }
+
+    void OverviewFrame::reset() {
+        updateActualBalance(0);
+        updatePendingBalance(0);
+    }
 
 }
+
+#include "OverviewFrame.moc"

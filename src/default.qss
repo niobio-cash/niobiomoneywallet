@@ -834,6 +834,7 @@ QFrame#m_accountFrame * {
 	border: 0;
 }
 QFrame#m_accountFrame QLineEdit#m_addressEdit {
+	font-family: 'M+ 1m';
 	padding: 0;
 	height: 25px;
 }
