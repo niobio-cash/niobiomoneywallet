@@ -82,7 +82,7 @@
     </qresource>
     <qresource prefix="/fonts">
         <file alias="mplusm">fonts/mplus-1m-medium.ttf</file>
-        <file alias="robotomono">fonts/robotomono-regular.ttf</file>
+        <file alias="sourcecodepro">fonts/sourcecodepro-medium.ttf</file>
         <file alias="quan">fonts/quan-project-webfont.ttf</file>
     </qresource>
 </RCC>

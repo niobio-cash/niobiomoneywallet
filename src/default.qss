@@ -784,7 +784,7 @@ QStatusBar {
     /*background-color: #282a36;*/
     background-color: #3C3F41;
     color: #ffb86c;
-    font-family: "Roboto Mono";
+    font-family: "Source Code Pro";
 }
 
 QStatusBar::item {

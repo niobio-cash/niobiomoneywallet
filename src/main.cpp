@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
     app.setApplicationVersion(Settings::instance().getVersion());
     app.setQuitOnLastWindowClosed(false);
 
-    QFontDatabase::addApplicationFont(":/fonts/robotomono");
+    QFontDatabase::addApplicationFont(":/fonts/sourcecodepro");
     QFontDatabase::addApplicationFont(":/fonts/quan");
     QFontDatabase::addApplicationFont(":/fonts/mplusm");
 
@@ -128,9 +128,6 @@ int main(int argc, char* argv[]) {
 
     SignalHandler::instance().init();
     QObject::connect(&SignalHandler::instance(), &SignalHandler::quitSignal, &app, &QApplication::quit);
-
-    /*QFont monospace("Roboto Mono");
-    monospace.setPixelSize(12);*/
 
     QSplashScreen* splash = new QSplashScreen(QPixmap(":images/splash"), /*Qt::WindowStaysOnTopHint |*/ Qt::X11BypassWindowManagerHint);
     if (!splash->isVisible()) {
