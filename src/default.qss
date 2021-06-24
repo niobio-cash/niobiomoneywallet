@@ -53,7 +53,7 @@ QMdiArea {
     background-color: rgba(40,42,54, 0.9);
 }
 QMainWindow, QMenuBar, QWidget, QFrame, QDialog {
-font-family: "Inter";
+font-family: "Source Code Pro";
     font-size: 14px;
 }
 QAbstractItemView {
@@ -744,23 +744,31 @@ QToolTip {
 QToolBar {
     border: none;
     color: #888;
-    font-family: "Inter";
+    font-family: "Source Code Pro";
     /*background: #3c3f41;*/
     background-color:#282A36;
 }
 QToolBar#accountToolBar {
-	border: 0; min-height: 71px;
+    border: 0;
+	border-bottom-width: 1px;
+	border-bottom-color: rgba(68, 71, 90, 0.9);
+    border-bottom-style: solid;
+	min-height: 71px;
 }
 
 QToolBar#toolBar {
-    background-color: rgba(10, 10, 10, 0.9);
-	/*background-color: rgba(40,42,54, 0.9);*/
+    /*background-color: rgba(10, 10, 10, 0.5);*/
+    /*background-color: rgba(68, 71, 90, 0.9);*/
+	/*background-color: rgba(40, 42, 54, 0.5);*/
 	/*width: 150px;
 	min-width: 150px;*/
 	spacing: 0;
 	padding: 0;
 	margin: 0;
 	border: 0;
+	border-right-width: 1px;
+	border-right-color: rgba(68, 71, 90, 0.9);
+	border-right-style: solid;
 }
 QToolBar#toolBar QToolButton{
 	background-color: transparent;
@@ -776,6 +784,18 @@ QToolBar#toolBar QToolButton{
 	border: none;
 	border-radius: 0;
 	min-width: 150px;
+}
+
+QToolBar#toolBar QToolButton:hover {
+	/*background-color: rgba(98, 114, 164, 0.3);*/
+	background-color: rgba(68, 71, 90, 0.9);
+}
+QToolBar#toolBar QToolButton:pressed {
+	background-color: rgba(68, 71, 90, 0.5);
+}
+
+QToolBar#toolBar QToolButton:checked {
+	background-color: rgba(68, 71, 90, 0.6);
 }
 
 
@@ -858,7 +878,11 @@ QFrame#m_accountFrame QLabel#addressStatusLabel {
 	color: #5813ae;
 }
 QFrame#TransactionFrame {
-padding: 4px;
+    padding: 4px;
+    border: 0;
+    border-left-width: 1px;
+    border-left-color: rgba(68, 71, 90, 0.9);
+    border-left-style: solid;
 }
 QLabel#m_iconLabel {
 background: transparent;
