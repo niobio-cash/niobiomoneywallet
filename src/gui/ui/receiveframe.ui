@@ -101,10 +101,20 @@
          <string>Request payment</string>
         </property>
         <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="0" colspan="2">
-          <widget class="QLabel" name="label">
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_6">
            <property name="text">
-            <string>Use this form to request payment.</string>
+            <string>PaymentID:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2" colspan="5">
+          <widget class="QLineEdit" name="m_requestPaymentIdEdit">
+           <property name="maxLength">
+            <number>64</number>
+           </property>
+           <property name="placeholderText">
+            <string>Payment identifier which payer should attach to transaction</string>
            </property>
           </widget>
          </item>
@@ -115,7 +125,7 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="1" colspan="2">
+         <item row="1" column="2" colspan="2">
           <widget class="QLineEdit" name="m_payerLabel">
            <property name="maxLength">
             <number>64</number>
@@ -125,119 +135,46 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="3" colspan="4">
-          <spacer name="horizontalSpacer_3">
+         <item row="4" column="0" colspan="6">
+          <spacer name="horizontalSpacer_5">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>361</width>
+             <width>488</width>
              <height>20</height>
             </size>
            </property>
           </spacer>
          </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_3">
+         <item row="0" column="0" colspan="3">
+          <widget class="QLabel" name="label">
            <property name="text">
-            <string>Amount:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QDoubleSpinBox" name="m_requestAmountSpin">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="baseSize">
-            <size>
-             <width>150</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="locale">
-            <locale language="English" country="UnitedStates"/>
-           </property>
-           <property name="suffix">
-            <string/>
-           </property>
-           <property name="decimals">
-            <number>8</number>
-           </property>
-           <property name="minimum">
-            <double>0.00000000</double>
-           </property>
-           <property name="maximum">
-            <double>999999999999999.00000000</double>
-           </property>
-           <property name="singleStep">
-            <double>1.00000000</double>
-           </property>
-           <property name="value">
-            <double>0.00000000</double>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="2" colspan="5">
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>547</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_6">
-           <property name="text">
-            <string>PaymentID:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1" colspan="5">
-          <widget class="QLineEdit" name="m_requestPaymentIdEdit">
-           <property name="maxLength">
-            <number>64</number>
-           </property>
-           <property name="placeholderText">
-            <string>Payment identifier which payer should attach to transaction</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="6">
-          <widget class="QPushButton" name="m_generatePaymentIdButton">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>24</height>
-            </size>
-           </property>
-           <property name="baseSize">
-            <size>
-             <width>0</width>
-             <height>24</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Generate Payment ID</string>
+            <string>Use this form to request payment.</string>
            </property>
           </widget>
          </item>
          <item row="4" column="6">
+          <widget class="QPushButton" name="m_closePaymentRequestFormButton">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>0</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Close</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="7">
           <widget class="QPushButton" name="m_createPaymentRequest">
            <property name="minimumSize">
             <size>
@@ -260,8 +197,8 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="5">
-          <widget class="QPushButton" name="m_closePaymentRequestFormButton">
+         <item row="3" column="7">
+          <widget class="QPushButton" name="m_generatePaymentIdButton">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -275,18 +212,100 @@
             </size>
            </property>
            <property name="text">
-            <string>Close</string>
+            <string>Generate Payment ID</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="0" colspan="5">
-          <spacer name="horizontalSpacer_5">
+         <item row="1" column="4" colspan="4">
+          <spacer name="horizontalSpacer_3">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>488</width>
+             <width>361</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Amount:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="receiveticker1">
+           <property name="font">
+            <font>
+             <family>quan-project</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>$ </string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QDoubleSpinBox" name="m_requestAmountSpin">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>quan-project</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="decimals">
+            <number>8</number>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>999999999999999.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3" colspan="5">
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>547</width>
              <height>20</height>
             </size>
            </property>

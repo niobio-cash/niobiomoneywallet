@@ -843,6 +843,17 @@ QFrame#m_overviewFrame QLabel {
 background-color: transparent;
 }
 
+QFrame#TransferFrame QLabel#label,
+QFrame#TransferFrame QLabel#label_2,
+QFrame#TransferFrame QLabel#label_3,
+QLabel#sendticker1,
+QLabel#sendticker2,
+QLabel#transferticker1,
+QLabel#receiveticker1,
+QLabel#m_selectedAmountLabel,
+QLabel#m_selectedAmount,
+QLabel#m_balanceLabel,
+QFrame#m_confirmLabel,
 QLabel#m_remote_fee_value,
 QLabel#totalBalance,
 QLabel#m_totalBalanceLabel,
@@ -876,6 +887,7 @@ QFrame#m_accountFrame QToolButton#m_qrButton {
 QFrame#m_accountFrame QLabel#totalBalance {
 	color: #f8f8f2;
 }
+
 QFrame#m_accountFrame QLabel#addressStatusLabel {
 	color: #5813ae;
 }
@@ -897,6 +909,10 @@ QLabel#label,
 QLabel#label_2,
 QLabel#label_4,
 QLabel#label_6,
+QLabel#sendticker1,
+QLabel#sendticker2,
+QLabel#transferticker1,
+QLabel#receiveticker1,
 QLabel#m_iconLabel {
 background: transparent;
 }

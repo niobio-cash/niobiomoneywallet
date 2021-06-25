@@ -209,7 +209,11 @@ QVariant TransactionsModel::getDisplayRole(const QModelIndex& _index) const {
   switch(_index.column()) {
   case COLUMN_DATE: {
     QDateTime date = _index.data(ROLE_DATE).toDateTime();
-    return (date.isNull() || !date.isValid() ? "- " : date.toString("dd.MM.yy HH:mm"));
+      if (date.isNull() || !date.isValid()) {
+          return "";
+      } else {
+          return date.toString("dd.MM.yy HH:mm");
+      }
   }
 
   case COLUMN_HASH:
@@ -236,7 +240,7 @@ QVariant TransactionsModel::getDisplayRole(const QModelIndex& _index) const {
   case COLUMN_AMOUNT: {
     qint64 amount = _index.data(ROLE_AMOUNT).value<qint64>();
     QString amountStr = CurrencyAdapter::instance().formatAmount(qAbs(amount)).remove(',');
-    return (amount < 0 ? "$ - " + amountStr : "$ " + amountStr);
+    return (amount < 0 ? amountStr : amountStr);
   }
 
   case COLUMN_PAYMENT_ID:
@@ -244,7 +248,7 @@ QVariant TransactionsModel::getDisplayRole(const QModelIndex& _index) const {
 
   case COLUMN_FEE: {
     qint64 fee = _index.data(ROLE_FEE).value<qint64>();
-    return "$ " + CurrencyAdapter::instance().formatAmount(fee);
+    return CurrencyAdapter::instance().formatAmount(fee);
   }
 
   case COLUMN_HEIGHT:
@@ -288,9 +292,9 @@ QVariant TransactionsModel::getEditRole(const QModelIndex& _index) const {
 
   case COLUMN_AMOUNT: {
     qint64 amount = _index.data(ROLE_AMOUNT).value<qint64>();
-    QString amountStr = "$ " + CurrencyAdapter::instance().formatAmount(qAbs(amount)).remove(',');
+    QString amountStr = CurrencyAdapter::instance().formatAmount(qAbs(amount)).remove(',');
     if (amount < 0) {
-      amountStr.insert(0, "- ");
+      amountStr.insert(0, " - ");
     }
     return (amountStr.toDouble());
   }
@@ -300,7 +304,7 @@ QVariant TransactionsModel::getEditRole(const QModelIndex& _index) const {
 
   case COLUMN_FEE: {
     qint64 fee = _index.data(ROLE_FEE).value<qint64>();
-    return "$ " + CurrencyAdapter::instance().formatAmount(fee);
+    return CurrencyAdapter::instance().formatAmount(fee);
   }
 
   case COLUMN_HEIGHT:

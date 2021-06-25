@@ -22,7 +22,7 @@ Q_DECL_CONSTEXPR quint32 ADDRESS_INPUT_INTERVAL = 1500;
 TransferFrame::TransferFrame(QWidget* _parent) : QFrame(_parent), m_ui(new Ui::TransferFrame), m_aliasProvider(new DnsManager(this)), m_addressInputTimer(-1) {
   m_ui->setupUi(this);
   setAttribute(Qt::WA_DeleteOnClose);
-  m_ui->m_amountSpin->setPrefix("$ ");
+  //m_ui->m_amountSpin->setPrefix("$ ");
   connect(m_aliasProvider, &DnsManager::aliasFoundSignal, this, &TransferFrame::onAliasFound);
 }
 

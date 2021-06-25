@@ -20,6 +20,27 @@
    <enum>QFrame::Sunken</enum>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="4">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Save to Contacts as:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="m_labelEdit">
+       <property name="maxLength">
+        <number>50</number>
+       </property>
+       <property name="placeholderText">
+        <string>Enter a label for this address to add it to your address book</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
@@ -27,7 +48,14 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="1" colspan="2">
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Amount:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QLineEdit" name="m_addressEdit">
@@ -80,17 +108,11 @@
      </item>
     </layout>
    </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>Amount:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1">
+   <item row="1" column="3">
     <widget class="QDoubleSpinBox" name="m_amountSpin">
      <property name="font">
       <font>
+       <family>quan-project</family>
        <pointsize>12</pointsize>
       </font>
      </property>
@@ -110,30 +132,22 @@
       <number>8</number>
      </property>
      <property name="maximum">
-      <double>9999999.98759555</double>
+      <double>9999999.987595550715923</double>
      </property>
     </widget>
    </item>
-   <item row="1" column="2">
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Save to Contacts as:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="m_labelEdit">
-       <property name="maxLength">
-        <number>50</number>
-       </property>
-       <property name="placeholderText">
-        <string>Enter a label for this address to add it to your address book</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+   <item row="1" column="1">
+    <widget class="QLabel" name="transferticker1">
+     <property name="font">
+      <font>
+       <family>quan-project</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>$ </string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
