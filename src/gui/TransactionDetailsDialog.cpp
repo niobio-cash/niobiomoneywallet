@@ -31,10 +31,8 @@ TransactionDetailsDialog::TransactionDetailsDialog(const QModelIndex& _index, QW
     _index.data(TransactionsModel::ROLE_ROW).toInt());
 
   quint64 numberOfConfirmations = index.data(TransactionsModel::ROLE_NUMBER_OF_CONFIRMATIONS).value<quint64>();
-  QString amountText = index.sibling(index.row(), TransactionsModel::COLUMN_AMOUNT).data().toString() + " " +
-    CurrencyAdapter::instance().getCurrencyTicker().toUpper();
-  QString feeText = CurrencyAdapter::instance().formatAmount(index.data(TransactionsModel::ROLE_FEE).value<quint64>()) + " " +
-    CurrencyAdapter::instance().getCurrencyTicker().toUpper();
+  QString amountText = "$ " +index.sibling(index.row(), TransactionsModel::COLUMN_AMOUNT).data().toString();
+  QString feeText = "$ " + CurrencyAdapter::instance().formatAmount(index.data(TransactionsModel::ROLE_FEE).value<quint64>());
 
   QString state;
   CryptoNote::WalletLegacyTransaction transaction;

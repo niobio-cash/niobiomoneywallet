@@ -27,7 +27,7 @@ ReceiveFrame::ReceiveFrame(QWidget* _parent) : QFrame(_parent), m_ui(new Ui::Rec
   m_ui->setupUi(this);
   m_ui->m_addressQRFrame->hide();
   m_ui->m_requestPaymentFrame->hide();
-  m_ui->m_requestAmountSpin->setSuffix(" " + CurrencyAdapter::instance().getCurrencyTicker().toUpper());
+  //m_ui->m_requestAmountSpin->setPrefix("$ ");
   connect(&WalletAdapter::instance(), &WalletAdapter::updateWalletAddressSignal, this, &ReceiveFrame::updateWalletAddress);
   connect(&WalletAdapter::instance(), &WalletAdapter::walletCloseCompletedSignal, this, &ReceiveFrame::walletClosed, Qt::QueuedConnection);
 }

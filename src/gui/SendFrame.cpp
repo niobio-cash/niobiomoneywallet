@@ -46,9 +46,9 @@ SendFrame::SendFrame(QWidget* _parent) : QFrame(_parent), m_ui(new Ui::SendFrame
   connect(&WalletAdapter::instance(), &WalletAdapter::walletSynchronizationProgressUpdatedSignal,
     this, &SendFrame::walletSynchronizationInProgress, Qt::QueuedConnection);
 
-  m_ui->m_tickerLabel->setText(CurrencyAdapter::instance().getCurrencyTicker().toUpper());
-  m_ui->m_feeSpin->setSuffix(" " + CurrencyAdapter::instance().getCurrencyTicker().toUpper());
-  m_ui->m_donateSpin->setSuffix(" " + CurrencyAdapter::instance().getCurrencyTicker().toUpper());
+  //m_ui->m_tickerLabel->setText(CurrencyAdapter::instance().getCurrencyTicker().toUpper());
+  //m_ui->m_feeSpin->setPrefix("$ ");
+  //m_ui->m_donateSpin->setPrefix("$ ");
   m_ui->m_feeSpin->setMinimum(CurrencyAdapter::instance().formatAmount(CurrencyAdapter::instance().getMinimumFee()).toDouble());
   m_ui->m_remote_label->hide();
   m_ui->m_remote_fee_help->hide();
@@ -148,9 +148,9 @@ void SendFrame::amountValueChange() {
         }
         if (remote_node_fee > 1000000000) {
           remote_node_fee = 1000000000;
-          m_ui->m_remote_fee_value->setText(CurrencyAdapter::instance().formatAmount(remote_node_fee)  + " Q1V");
+          m_ui->m_remote_fee_value->setText("$ " + CurrencyAdapter::instance().formatAmount(remote_node_fee));
         } else {
-          m_ui->m_remote_fee_value->setText(CurrencyAdapter::instance().formatAmount(remote_node_fee)  + " Q1V (" + CurrencyAdapter::instance().formatPercent(SendFrame::remote_node_fee_percent) + "%)");
+          m_ui->m_remote_fee_value->setText("$ " + CurrencyAdapter::instance().formatAmount(remote_node_fee)  + " (" + CurrencyAdapter::instance().formatPercent(SendFrame::remote_node_fee_percent) + "%)");
         }
     }
 
@@ -176,9 +176,9 @@ void SendFrame::amountValueChange() {
     if( !remote_node_fee_address.isEmpty() ) {
         quint64 actualBalance = WalletAdapter::instance().getActualBalance();
         if(actualBalance > remote_node_fee) {
-            m_ui->m_balanceLabel->setText(CurrencyAdapter::instance().formatAmount(actualBalance - remote_node_fee));
+            m_ui->m_balanceLabel->setText("$ " + CurrencyAdapter::instance().formatAmount(actualBalance - remote_node_fee));
         } else {
-            m_ui->m_balanceLabel->setText(CurrencyAdapter::instance().formatAmount(actualBalance));
+            m_ui->m_balanceLabel->setText("$ " + CurrencyAdapter::instance().formatAmount(actualBalance));
         }
     }
 }
@@ -392,9 +392,9 @@ void SendFrame::sendTransactionCompleted(CryptoNote::TransactionId _id, bool _er
 
 void SendFrame::walletActualBalanceUpdated(quint64 _balance) {
   if(!remote_node_fee_address.isEmpty() && _balance > remote_node_fee) {
-    m_ui->m_balanceLabel->setText(CurrencyAdapter::instance().formatAmount(_balance - remote_node_fee));
+    m_ui->m_balanceLabel->setText("$ " + CurrencyAdapter::instance().formatAmount(_balance - remote_node_fee));
   } else {
-    m_ui->m_balanceLabel->setText(CurrencyAdapter::instance().formatAmount(_balance));
+    m_ui->m_balanceLabel->setText("$ " + CurrencyAdapter::instance().formatAmount(_balance));
   }
 }
 
