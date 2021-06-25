@@ -843,6 +843,7 @@ QFrame#m_overviewFrame QLabel {
 background-color: transparent;
 }
 
+QLabel#m_remote_fee_value,
 QLabel#totalBalance,
 QLabel#m_totalBalanceLabel,
 QLabel#m_pendingBalanceLabel,
@@ -850,7 +851,8 @@ QLabel#m_actualBalanceLabel,
 QLabel#m_amountLabel {
 font-family: 'quan-project';
 }
-
+QFrame#SendFrame,
+QFrame#SendFrame QWidget,
 QWidget#centralwidget{
 background-color: rgba(40,42,54, 0.9);
 }
@@ -883,9 +885,24 @@ QFrame#TransactionFrame {
     border-left-width: 1px;
     border-left-color: rgba(68, 71, 90, 0.9);
     border-left-style: solid;
+    background-color: rgba(40,42,54, 0.9);
 }
+QLabel#m_selectedAmountLabel,
+QLabel#m_selectedAmount,
+QLabel#m_balanceLabel,
+QFrame#TransferFrame QLabel#label,
+QFrame#TransferFrame QLabel#label_2,
+QFrame#TransferFrame QLabel#label_3,
+QLabel#label,
+QLabel#label_2,
+QLabel#label_4,
+QLabel#label_6,
 QLabel#m_iconLabel {
 background: transparent;
-color: #fff;
+}
+
+QFrame#TransferFrame QToolButton,
+QToolButton#m_clearAllButton {
+border: 0;
 }
 

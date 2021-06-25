@@ -108,7 +108,7 @@ void TransactionsFrame::exportToCsv() {
         res.append("\"").append(index.data().toString().toUtf8()).append("\",");
         res.append("\"").append(index.sibling(index.row(), TransactionsModel::COLUMN_DATE).data().toString().toUtf8()).append("\",");
         res.append("\"").append(index.sibling(index.row(), TransactionsModel::COLUMN_AMOUNT).data().toString().toUtf8()).append("\",");
-        res.append("\"").append(CurrencyAdapter::instance().formatAmount(index.data(TransactionsModel::ROLE_FEE).value<quint64>())).append("\",");
+        res.append("\"").append("$ " + CurrencyAdapter::instance().formatAmount(index.data(TransactionsModel::ROLE_FEE).value<quint64>())).append("\",");
         res.append("\"").append(index.sibling(index.row(), TransactionsModel::COLUMN_HASH).data().toString().toUtf8()).append("\",");
         res.append("\"").append(index.data(TransactionsModel::ROLE_HEIGHT).toString().toUtf8()).append("\",");
         res.append("\"").append(index.sibling(index.row(), TransactionsModel::COLUMN_ADDRESS).data().toString().toUtf8()).append("\",");
@@ -120,7 +120,7 @@ void TransactionsFrame::exportToCsv() {
         res.append("\"").append(index.data().toString().toUtf8()).append("\",");
         res.append("\"").append(index.sibling(index.row(), TransactionsModel::COLUMN_DATE).data().toString().toUtf8()).append("\",");
         res.append("\"").append(index.sibling(index.row(), TransactionsModel::COLUMN_AMOUNT).data().toString().toUtf8()).append("\",");
-        res.append("\"").append(CurrencyAdapter::instance().formatAmount(index.data(TransactionsModel::ROLE_FEE).value<quint64>())).append("\",");
+        res.append("\"").append("$ " + CurrencyAdapter::instance().formatAmount(index.data(TransactionsModel::ROLE_FEE).value<quint64>())).append("\",");
         res.append("\"").append(index.sibling(index.row(), TransactionsModel::COLUMN_HASH).data().toString().toUtf8()).append("\",");
         res.append("\"").append(index.data(TransactionsModel::ROLE_HEIGHT).toString().toUtf8()).append("\",");
         res.append("\"").append(index.sibling(index.row(), TransactionsModel::COLUMN_ADDRESS).data().toString().toUtf8()).append("\",");
@@ -182,7 +182,7 @@ void TransactionsFrame::computeSelected() {
         QString amountstring = index.sibling(index.row(), TransactionsModel::COLUMN_AMOUNT).data().toString().remove(',');
         amount += amountstring.toDouble();
     }
-    QString amountText = QString::number(amount, 'f', 8) + " " + CurrencyAdapter::instance().getCurrencyTicker().toUpper();
+    QString amountText = "$ " + QString::number(amount, 'f', 8);
     if (amount < 0) amountText = "<span style='color:red;'>" + amountText + "</span>";
     m_ui->m_selectedAmount->show();
     m_ui->m_selectedAmount->setText(amountText);
@@ -190,7 +190,7 @@ void TransactionsFrame::computeSelected() {
 }
 
 QString TransactionsFrame::formatAmount(int64_t _amount) const {
-  QString s =CurrencyAdapter::instance().formatAmount(static_cast<uint64_t>(std::abs(_amount)));
+  QString s = "$ " + CurrencyAdapter::instance().formatAmount(static_cast<uint64_t>(std::abs(_amount)));
     if (_amount < 0) {
       s.insert(0, "-");
     }

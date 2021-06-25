@@ -17,9 +17,9 @@ ConfirmSendDialog::~ConfirmSendDialog() {
 }
 
 void ConfirmSendDialog::showPasymentDetails(quint64 _total) {
-    setWindowTitle(QString(tr("Confirm sending %1 Q1V")).arg(CurrencyAdapter::instance().formatAmount(_total)));
+    setWindowTitle(QString(tr("Confirm sending %1 Q1V")).arg("$ " + CurrencyAdapter::instance().formatAmount(_total)));
     QString amountText = m_ui->m_confirmLabel->text();
-    m_ui->m_confirmLabel->setText(amountText.arg(CurrencyAdapter::instance().formatAmount(_total)));
+    m_ui->m_confirmLabel->setText(amountText.arg("$ " + CurrencyAdapter::instance().formatAmount(_total)));
 }
 void ConfirmSendDialog::showPaymentId(QString _paymentid) {
     m_ui->m_paymentIdLabel->setText(QString(tr("<html><head/><body><p>Payment ID: %1</p></body></html>")).arg(_paymentid));
