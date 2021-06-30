@@ -26,7 +26,6 @@
 #include "WalletNodes.h"
 
 #define DEBUG 1
-
 using namespace WalletGui;
 
 #pragma clang diagnostic push
@@ -129,7 +128,8 @@ int main(int argc, char* argv[]) {
     SignalHandler::instance().init();
     QObject::connect(&SignalHandler::instance(), &SignalHandler::quitSignal, &app, &QApplication::quit);
 
-    QSplashScreen* splash = new QSplashScreen(QPixmap(":images/splash"), /*Qt::WindowStaysOnTopHint |*/ Qt::X11BypassWindowManagerHint);
+    QSplashScreen *splash = new QSplashScreen(QPixmap(":images/splash"), /*Qt::WindowStaysOnTopHint |*/
+                                              Qt::X11BypassWindowManagerHint);
     if (!splash->isVisible()) {
         splash->show();
     }
@@ -139,9 +139,12 @@ int main(int argc, char* argv[]) {
     app.processEvents();
     qRegisterMetaType<CryptoNote::TransactionId>("CryptoNote::TransactionId");
     qRegisterMetaType<quintptr>("quintptr");
-    if (!NodeAdapter::instance().init()) {
-        return 0;
-    }
+    NodeAdapter::instance().init();
+    /*if (!NodeAdapter::instance().init()) {
+        QMessageBox messageBox;
+        messageBox.critical(0,"Error","Node does not respond, choose another node and try again!");
+        messageBox.setFixedSize(500,200);
+    }*/
     splash->finish(&MainWindow::instance());
     Updater d;
     d.checkForUpdate();
@@ -151,7 +154,8 @@ int main(int argc, char* argv[]) {
     WalletAdapter::instance().open("");
 
     QTimer::singleShot(10000, paymentServer, SLOT(uiReady()));
-    QObject::connect(paymentServer, &PaymentServer::receivedURI, &MainWindow::instance(), &MainWindow::handlePaymentRequest, Qt::QueuedConnection);
+    QObject::connect(paymentServer, &PaymentServer::receivedURI, &MainWindow::instance(),
+                     &MainWindow::handlePaymentRequest, Qt::QueuedConnection);
 
     QObject::connect(QApplication::instance(), &QApplication::aboutToQuit, []() {
         MainWindow::instance().quit();
@@ -163,5 +167,8 @@ int main(int argc, char* argv[]) {
     });
 
     return app.exec();
+
 }
+
+
 #pragma clang diagnostic pop
