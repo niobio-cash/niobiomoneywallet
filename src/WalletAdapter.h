@@ -71,7 +71,8 @@ private:
   std::atomic<bool> m_isSynchronized;
   std::atomic<quint64> m_lastWalletTransactionId;
   QTimer m_newTransactionsNotificationTimer;
-  QPushButton* m_closeButton;
+    QTimer *m_checkTimeNodeTimer;
+    QPushButton *m_closeButton;
 
   WalletAdapter();
   ~WalletAdapter();
