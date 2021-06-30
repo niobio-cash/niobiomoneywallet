@@ -211,7 +211,8 @@ namespace WalletGui {
         lock();
         m_wallet->removeObserver(this);
         m_isSynchronized = false;
-        m_newTransactionsNotificationTimer.stop();
+        if (m_newTransactionsNotificationTimer.isActive()) m_newTransactionsNotificationTimer.stop();
+        if (m_checkTimeNodeTimer->isActive()) m_checkTimeNodeTimer->stop();
         m_lastWalletTransactionId = std::numeric_limits<quint64>::max();
         Q_EMIT walletCloseCompletedSignal();
         QCoreApplication::processEvents();
@@ -229,16 +230,15 @@ namespace WalletGui {
         if (openFile(_file, false)) {
             try {
                 m_wallet->save(m_file, _details, _cache);
-            } catch (std::system_error &) {
+                Q_EMIT walletStateChangedSignal(tr("Saving data"));
+                return true;
+            } catch (std::system_error _error) {
                 closeFile();
                 return false;
             }
-            Q_EMIT walletStateChangedSignal(tr("Saving data"));
         } else {
             return false;
         }
-
-        return true;
     }
 
     void WalletAdapter::backup(const QString &_file) {
@@ -603,16 +603,35 @@ namespace WalletGui {
 
         const QDateTime currentTime = QDateTime::currentDateTimeUtc();
         const QDateTime blockTime = NodeAdapter::instance().getLastLocalBlockTimestamp();
-        quint64 blockAge = blockTime.msecsTo(currentTime);
-        const QString warningString = blockTime.msecsTo(currentTime) < LAST_BLOCK_INFO_WARNING_INTERVAL ? "" :
-                                      QString(tr("  Warning: last block was received %1 hours %2 minutes ago")).arg(
-                                              blockAge / MSECS_IN_HOUR).arg(blockAge % MSECS_IN_HOUR / MSECS_IN_MINUTE);
-        Q_EMIT walletStateChangedSignal(QString(tr("Wallet synchronized. Height: %1  |  Time (UTC): %2%3")).
-                arg(NodeAdapter::instance().getLastLocalBlockHeight()).
-                arg(QLocale(QLocale::English).toString(blockTime, "dd.MM.yyyy, HH:mm:ss")).
-                arg(warningString));
 
-        QTimer::singleShot(LAST_BLOCK_INFO_UPDATING_INTERVAL, this, SLOT(updateBlockStatusText()));
+        QString checkTimeNode = blockTime.toString("yyyy-MM-dd"); //strUTC = "1970-01-01"
+        if (checkTimeNode == "1970-01-01") {
+            Q_EMIT walletChooseNodeSignal();
+            Q_EMIT walletStateChangedSignal(QString(tr("Not synchronized, change the node and restart the wallet")));
+            //QTimer::singleShot(LAST_BLOCK_INFO_UPDATING_INTERVAL, this, SLOT(updateBlockStatusText()));
+            m_checkTimeNodeTimer = new QTimer(this);
+            m_checkTimeNodeTimer->setInterval(LAST_BLOCK_INFO_UPDATING_INTERVAL);
+            m_checkTimeNodeTimer->setSingleShot(true);
+            connect(m_checkTimeNodeTimer, SIGNAL(timeout()), SLOT(updateBlockStatusText()));
+            m_checkTimeNodeTimer->start();
+        } else {
+            quint64 blockAge = blockTime.msecsTo(currentTime);
+            const QString warningString = blockTime.msecsTo(currentTime) < LAST_BLOCK_INFO_WARNING_INTERVAL ? "" :
+                                          QString(tr("  Warning: last block was received %1 hours %2 minutes ago")).arg(
+                                                  blockAge / MSECS_IN_HOUR).arg(
+                                                  blockAge % MSECS_IN_HOUR / MSECS_IN_MINUTE);
+            Q_EMIT walletStateChangedSignal(QString(tr("Wallet synchronized. Height: %1  |  Time (UTC): %2%3")).
+                    arg(NodeAdapter::instance().getLastLocalBlockHeight()).
+                    arg(QLocale(QLocale::English).toString(blockTime, "dd.MM.yyyy, HH:mm:ss")).
+                    arg(warningString));
+
+            //QTimer::singleShot(LAST_BLOCK_INFO_UPDATING_INTERVAL, this, SLOT(updateBlockStatusText()));
+            m_checkTimeNodeTimer = new QTimer(this);
+            m_checkTimeNodeTimer->setInterval(LAST_BLOCK_INFO_UPDATING_INTERVAL);
+            m_checkTimeNodeTimer->setSingleShot(true);
+            connect(m_checkTimeNodeTimer, SIGNAL(timeout()), SLOT(updateBlockStatusText()));
+            m_checkTimeNodeTimer->start();
+        }
     }
 
     void WalletAdapter::updateBlockStatusTextWithDelay() {

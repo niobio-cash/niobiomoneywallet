@@ -71,7 +71,8 @@ private:
   std::atomic<bool> m_isSynchronized;
   std::atomic<quint64> m_lastWalletTransactionId;
   QTimer m_newTransactionsNotificationTimer;
-  QPushButton* m_closeButton;
+    QTimer *m_checkTimeNodeTimer;
+    QPushButton *m_closeButton;
 
   WalletAdapter();
   ~WalletAdapter();
@@ -104,6 +105,8 @@ Q_SIGNALS:
   void walletSendTransactionCompletedSignal(CryptoNote::TransactionId _transaction_id, int _error, const QString& _error_text);
   void walletTransactionUpdatedSignal(CryptoNote::TransactionId _transaction_id);
   void walletStateChangedSignal(const QString &_state_text);
+
+    void walletChooseNodeSignal();
 
   void openWalletWithPasswordSignal(bool _error);
   void changeWalletPasswordSignal();
