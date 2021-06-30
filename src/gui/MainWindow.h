@@ -69,6 +69,8 @@ private:
   void createTrayIcon();
   void createTrayIconMenu();
 
+    void chooseNodes();
+
   void minimizeToTray(bool _on);
   void setStatusBarText(const QString& _text);
   void showMessage(const QString& _text, QtMsgType _type);

@@ -98,21 +98,24 @@ void MainWindow::connectToSignals() {
   connect(&WalletAdapter::instance(), &WalletAdapter::openWalletWithPasswordSignal, this, &MainWindow::askForWalletPassword, Qt::QueuedConnection);
   connect(&WalletAdapter::instance(), &WalletAdapter::changeWalletPasswordSignal, this, &MainWindow::encryptWallet, Qt::QueuedConnection);
   connect(&WalletAdapter::instance(), &WalletAdapter::walletSynchronizationProgressUpdatedSignal,
-    this, &MainWindow::walletSynchronizationInProgress, Qt::QueuedConnection);
-  connect(&WalletAdapter::instance(), &WalletAdapter::walletSynchronizationCompletedSignal, this, &MainWindow::walletSynchronized
-    , Qt::QueuedConnection);
-  connect(&WalletAdapter::instance(), &WalletAdapter::walletStateChangedSignal, this, &MainWindow::setStatusBarText);
-  connect(&WalletAdapter::instance(), &WalletAdapter::walletInitCompletedSignal, this, &MainWindow::walletOpened);
-  connect(&WalletAdapter::instance(), &WalletAdapter::walletCloseCompletedSignal, this, &MainWindow::walletClosed);
-  connect(&WalletAdapter::instance(), &WalletAdapter::walletTransactionCreatedSignal, this, [this]() {
-      QApplication::alert(this);
-  });
+          this, &MainWindow::walletSynchronizationInProgress, Qt::QueuedConnection);
+    connect(&WalletAdapter::instance(), &WalletAdapter::walletSynchronizationCompletedSignal, this,
+            &MainWindow::walletSynchronized, Qt::QueuedConnection);
+    connect(&WalletAdapter::instance(), &WalletAdapter::walletStateChangedSignal, this, &MainWindow::setStatusBarText);
+    connect(&WalletAdapter::instance(), &WalletAdapter::walletInitCompletedSignal, this, &MainWindow::walletOpened);
+    connect(&WalletAdapter::instance(), &WalletAdapter::walletCloseCompletedSignal, this, &MainWindow::walletClosed);
+    connect(&WalletAdapter::instance(), &WalletAdapter::walletTransactionCreatedSignal, this, [this]() {
+        QApplication::alert(this);
+    });
 
-  connect(&NodeAdapter::instance(), &NodeAdapter::peerCountUpdatedSignal, this, &MainWindow::peerCountUpdated, Qt::QueuedConnection);
-  connect(m_ui->m_exitAction, &QAction::triggered, qApp, &QApplication::quit);
-  connect(m_ui->m_accountFrame, &AccountFrame::showQRcodeSignal, this, &MainWindow::onShowQR, Qt::QueuedConnection);
-  connect(m_ui->m_sendFrame, &SendFrame::uriOpenSignal, this, &MainWindow::onUriOpenSignal, Qt::QueuedConnection);
-  connect(m_connectionStateIconLabel, SIGNAL(clicked()), this, SLOT(showStatusInfo()));
+    connect(&WalletAdapter::instance(), &WalletAdapter::walletChooseNodeSignal, this, &MainWindow::chooseNodes);
+
+    connect(&NodeAdapter::instance(), &NodeAdapter::peerCountUpdatedSignal, this, &MainWindow::peerCountUpdated,
+            Qt::QueuedConnection);
+    connect(m_ui->m_exitAction, &QAction::triggered, qApp, &QApplication::quit);
+    connect(m_ui->m_accountFrame, &AccountFrame::showQRcodeSignal, this, &MainWindow::onShowQR, Qt::QueuedConnection);
+    connect(m_ui->m_sendFrame, &SendFrame::uriOpenSignal, this, &MainWindow::onUriOpenSignal, Qt::QueuedConnection);
+    connect(m_connectionStateIconLabel, SIGNAL(clicked()), this, SLOT(showStatusInfo()));
 }
 
 void MainWindow::setDefaultWindowTitle() {
@@ -860,24 +863,29 @@ void MainWindow::walletOpened(bool _error, const QString& _error_text) {
   }
 }
 
-void MainWindow::walletClosed() {
-  m_ui->m_backupWalletAction->setEnabled(false);
-  m_ui->m_encryptWalletAction->setEnabled(false);
-  m_ui->m_changePasswordAction->setEnabled(false);
-  m_ui->m_closeWalletAction->setEnabled(false);
-  m_ui->m_openUriAction->setEnabled(false);
-  m_ui->m_exportTrackingKeyAction->setEnabled(false);
-  m_ui->m_showPrivateKey->setEnabled(false);
-  m_ui->m_resetAction->setEnabled(false);
-  m_ui->m_showMnemonicSeedAction->setEnabled(false);
+    void MainWindow::chooseNodes() {
+        m_ui->m_overviewFrame->hide();
+        m_ui->m_walletNodesFrame->show();
+    }
+
+    void MainWindow::walletClosed() {
+        m_ui->m_backupWalletAction->setEnabled(false);
+        m_ui->m_encryptWalletAction->setEnabled(false);
+        m_ui->m_changePasswordAction->setEnabled(false);
+        m_ui->m_closeWalletAction->setEnabled(false);
+        m_ui->m_openUriAction->setEnabled(false);
+        m_ui->m_exportTrackingKeyAction->setEnabled(false);
+        m_ui->m_showPrivateKey->setEnabled(false);
+        m_ui->m_resetAction->setEnabled(false);
+        m_ui->m_showMnemonicSeedAction->setEnabled(false);
   m_ui->m_overviewFrame->hide();
   accountWidget->setVisible(false);
   m_ui->m_receiveFrame->hide();
   m_ui->m_sendFrame->hide();
   m_ui->m_transactionsFrame->hide();
-  m_ui->m_addressBookFrame->hide();
-  //m_ui->m_miningFrame->hide();
-  m_ui->m_walletNodesFrame->hide();
+        m_ui->m_addressBookFrame->hide();
+        m_ui->m_miningFrame->hide();
+        m_ui->m_walletNodesFrame->hide();
   m_encryptionStateIconLabel->hide();
   m_trackingModeIconLabel->hide();
   m_synchronizationStateIconLabel->hide();
