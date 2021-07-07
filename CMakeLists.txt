@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.18)
+cmake_minimum_required(VERSION 3.11)
 
 include(macros/settings.cmake)
 include(macros/qrencode.cmake)
@@ -35,7 +35,7 @@ if(WIN32)
 else(WIN32)
     set(Boost_USE_STATIC_RUNTIME ON)
 endif(WIN32)
-
+set(Boost_NO_BOOST_CMAKE ON)
 find_package(Boost 1.58 REQUIRED COMPONENTS date_time filesystem program_options regex serialization system thread chrono)
 if ((${Boost_MAJOR_VERSION} EQUAL 1) AND (${Boost_MINOR_VERSION} EQUAL 54))
     message(SEND_ERROR "Boost version 1.54 is unsupported, more details are available here http://goo.gl/RrCFmA")
@@ -95,8 +95,8 @@ elseif (UNIX)
         set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11 -maes -D_DARWIN_C_SOURCE")
         set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework Cocoa -framework OpenGL -framework CoreFoundation -framework Carbon -framework IOKit -L/usr/lib")
 
-        set(MACOSX_BUNDLE_ICON_FILE logo2.icns)
-        set(APPLICATION_ICON src/images/logo2.icns)
+        set(MACOSX_BUNDLE_ICON_FILE q1v-wallet.icns)
+        set(APPLICATION_ICON src/images/q1v-wallet.icns)
         set_source_files_properties(${APPLICATION_ICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
 
         set(BUILD_PLATFORM MACOSX_BUNDLE)
@@ -156,7 +156,7 @@ elseif (UNIX)
 
     install(PROGRAMS build/${PROJECT_NAME}-wallet DESTINATION bin
             PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
-    install(FILES src/niobiocashwallet.desktop DESTINATION share/applications)
+    install(FILES src/quanwallet.desktop DESTINATION share/applications)
     install(FILES src/images/logo5.png DESTINATION share/pixmaps RENAME logo5.png)
     install(FILES copyright DESTINATION share/doc/${CN_PROJECT_NAME})
 
