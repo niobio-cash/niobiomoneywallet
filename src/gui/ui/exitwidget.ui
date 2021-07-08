@@ -24,7 +24,7 @@
    <item>
     <widget class="QLabel" name="m_label">
      <property name="text">
-      <string>%1 wallet is saving data.
+      <string>%1 is saving data.
 Please wait...</string>
      </property>
     </widget>
