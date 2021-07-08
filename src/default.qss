@@ -53,7 +53,7 @@ QMdiArea {
     background-color: rgba(40,42,54, 0.9);
 }
 QMainWindow, QMenuBar, QWidget, QFrame, QDialog {
-font-family: "Source Code Pro";
+font-family: "sourcecodepro";
     font-size: 14px;
 }
 QAbstractItemView {
@@ -744,7 +744,7 @@ QToolTip {
 QToolBar {
     border: none;
     color: #888;
-    font-family: "Source Code Pro";
+    font-family: "sourcecodepro";
     /*background: #3c3f41;*/
     background-color:#282A36;
 }
@@ -804,7 +804,7 @@ QStatusBar {
     /*background-color: #282a36;*/
     background-color: #3C3F41;
     color: #ffb86c;
-    font-family: "Source Code Pro";
+    font-family: "sourcecodepro";
 }
 
 QStatusBar::item {
@@ -860,7 +860,7 @@ QLabel#m_totalBalanceLabel,
 QLabel#m_pendingBalanceLabel,
 QLabel#m_actualBalanceLabel,
 QLabel#m_amountLabel {
-font-family: 'quan-project';
+font-family: 'quan';
 }
 QFrame#SendFrame,
 QFrame#SendFrame QWidget,
