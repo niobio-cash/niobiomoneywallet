@@ -860,7 +860,7 @@ QLabel#m_totalBalanceLabel,
 QLabel#m_pendingBalanceLabel,
 QLabel#m_actualBalanceLabel,
 QLabel#m_amountLabel {
-font-family: 'quan';
+font-family: 'quan-project';
 }
 QFrame#SendFrame,
 QFrame#SendFrame QWidget,
