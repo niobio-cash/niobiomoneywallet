@@ -922,6 +922,6 @@ QToolButton#m_clearAllButton {
 border: 0;
 }
 
-ExitWidget {
-    background: #3c3f41;
+QWidget#ExitWidget {
+    background-color: #3c3f41;
 }

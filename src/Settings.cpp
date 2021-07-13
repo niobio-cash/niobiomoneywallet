@@ -99,8 +99,7 @@ void Settings::load() {
   }
 
   QStringList defaultPoolList;
-  defaultPoolList
-  << "pool.niobiocash.com:3333";
+  defaultPoolList << "pool.quan-project.com:3333";
   //if (!m_settings.contains(OPTION_MINING_POOLS)) {
   setMiningPoolList(QStringList() << defaultPoolList);
   //} else {
@@ -115,17 +114,17 @@ void Settings::load() {
 
   QStringList defaultNodesList;
   defaultNodesList << "remote-001.quan-project.com:8314";
-  if (!m_settings.contains(OPTION_RPCNODES)) {
+  //if (!m_settings.contains(OPTION_RPCNODES)) {
     setRpcNodesList(QStringList() << defaultNodesList);
-  } else {
-    QStringList nodesList = getRpcNodesList();
-    Q_FOREACH (const QString& node, defaultNodesList) {
-      if (!nodesList.contains(node)) {
-        nodesList << node;
-      }
-    }
-    setRpcNodesList(nodesList);
-  }
+  //} else {
+  //  QStringList nodesList = getRpcNodesList();
+  //  Q_FOREACH (const QString& node, defaultNodesList) {
+  //    if (!nodesList.contains(node)) {
+  //      nodesList << node;
+  //    }
+  //  }
+  //  setRpcNodesList(nodesList);
+  //}
   //auto wNodes = new WalletNodes;
   //wNodes->GetWalletNodes();
 

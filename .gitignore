@@ -3,6 +3,7 @@
 /tags
 *.qm
 *.pro.user
+.vscode/
 
 ##################
 
