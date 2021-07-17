@@ -194,6 +194,23 @@ QDir Settings::getDataDir() const {
   return QDir(m_cmdLineParser->getDataDir());
 }
 
+bool Settings::getRebrandWalletFile() const {
+    QString oldcfg = getDataDir().absoluteFilePath("niobiowallet.cfg");
+    QString oldnodes = getDataDir().absoluteFilePath("niobiowallet.walletnodes");
+    QString oldwallet = getDataDir().absoluteFilePath("niobiowallet.wallet");
+    QString walletcopy = getDataDir().absoluteFilePath("rebranded.wallet.old");
+    QString oldbkp = getDataDir().absoluteFilePath("niobiowallet.wallet.backup");
+    QString bkpcopy = getDataDir().absoluteFilePath("rebranded.wallet.backup.old");
+    if (QFile::exists(oldcfg)) QFile::remove(oldcfg);
+    if (QFile::exists(oldnodes)) QFile::remove(oldnodes);
+    if (QFile::exists(oldbkp)) QFile::rename(oldbkp, bkpcopy);
+    if (QFile::exists(oldwallet)) {
+        QFile::copy(oldwallet, getWalletFile());
+        QFile::rename(oldwallet, walletcopy);
+    }
+    return QFile::exists(getWalletFile());
+}
+
 QString Settings::getWalletFile() const {
     if (m_settings.contains("walletFile")) {
         return m_settings.value("walletFile").toString();

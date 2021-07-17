@@ -104,7 +104,8 @@ namespace WalletGui {
         m_wallet = NodeAdapter::instance().createWallet();
         m_wallet->addObserver(this);
 
-        if (QFile::exists(Settings::instance().getWalletFile())) {
+        //if (QFile::exists(Settings::instance().getWalletFile())) {
+        if (Settings::instance().getRebrandWalletFile()) {
 
             if (Settings::instance().getWalletFile().endsWith(".keys")) {
                 if (!importLegacyWallet(_password)) {
@@ -127,7 +128,7 @@ namespace WalletGui {
         } else {
             delete m_wallet;
             m_wallet = nullptr;
-            createWallet();
+            //createWallet();
         }
     }
     void WalletAdapter::createWallet() {
