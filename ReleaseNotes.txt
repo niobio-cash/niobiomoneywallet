@@ -1,5 +1,9 @@
 Release notes Asset QUAN - First Version wallet
 
+v2.0.0
+- Rebrand to Quan
+- Speed up sync
+
 v1.3.7
 - NCIP 0004: Allows flexible wallet node fee
 - New language files
