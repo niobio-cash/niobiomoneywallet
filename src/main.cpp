@@ -22,6 +22,7 @@
 #include "Update.h"
 #include <QTextCodec>
 #include <QFontDatabase>
+#include <Common/Util.h>
 #include "PaymentServer.h"
 #include "WalletNodes.h"
 
@@ -30,7 +31,8 @@ using namespace WalletGui;
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "-Wclazy-qt-macros"
-int main(int argc, char* argv[]) {
+
+int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     app.setApplicationName(CurrencyAdapter::instance().getCurrencyName() + "wallet");
     app.setApplicationVersion(Settings::instance().getVersion());
@@ -59,7 +61,7 @@ int main(int argc, char* argv[]) {
 
     QString lng = Settings::instance().getLanguage();
 
-    if(!lng.isEmpty()) {
+    if (!lng.isEmpty()) {
         translator.load(":/languages/" + lng + ".qm");
         translatorQt.load(":/languages/qt_" + lng + ".qm");
 
@@ -73,7 +75,7 @@ int main(int argc, char* argv[]) {
               QLocale::setDefault(QLocale("be_BY"));
           } else if(lng == "de") {
               QLocale::setDefault(QLocale("de_DE"));
-          } else */if(lng == "es") {
+          } else */if (lng == "es") {
             QLocale::setDefault(QLocale("es_ES"));
         } else {
             QLocale::setDefault(QLocale::c());
@@ -81,7 +83,7 @@ int main(int argc, char* argv[]) {
 
     } else {
         translator.load(":/languages/" + QLocale::system().name());
-        translatorQt.load(":/languages/qt_" +  QLocale::system().name());
+        translatorQt.load(":/languages/qt_" + QLocale::system().name());
         QLocale::setDefault(QLocale::system().name());
     }
     app.installTranslator(&translator);
@@ -113,13 +115,18 @@ int main(int argc, char* argv[]) {
 
     QString dataDirPath = Settings::instance().getDataDir().absolutePath();
 
-    if (!QDir().exists(dataDirPath)) {
-        QDir().mkpath(dataDirPath);
+    if (!Tools::directoryExists(dataDirPath.toStdString())) {
+        if (!Tools::create_directories_if_necessary(dataDirPath.toStdString())) {
+            throw std::runtime_error("Can't create directory: " + dataDirPath.toStdString());
+        }
     }
 
     QLockFile lockFile(Settings::instance().getDataDir().absoluteFilePath(QApplication::applicationName() + ".lock"));
     if (!lockFile.tryLock()) {
-        QMessageBox::warning(nullptr, QObject::tr("Fail"), QObject::tr("%1 wallet already running or I cannot create lock file %2. Check your permissions.").arg(CurrencyAdapter::instance().getCurrencyDisplayName()).arg(Settings::instance().getDataDir().absoluteFilePath(QApplication::applicationName() + ".lock")));
+        QMessageBox::warning(nullptr, QObject::tr("Fail"), QObject::tr(
+                "%1 wallet already running or I cannot create lock file %2. Check your permissions.").arg(
+                CurrencyAdapter::instance().getCurrencyDisplayName()).arg(
+                Settings::instance().getDataDir().absoluteFilePath(QApplication::applicationName() + ".lock")));
         return 0;
     }
     auto wNodes = new WalletNodes;
