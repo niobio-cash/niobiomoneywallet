@@ -128,7 +128,7 @@ namespace WalletGui {
         } else {
             delete m_wallet;
             m_wallet = nullptr;
-            //createWallet();
+            createWallet();
         }
     }
     void WalletAdapter::createWallet() {

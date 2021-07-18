@@ -99,7 +99,7 @@ int main(int argc, char *argv[]) {
     if (PaymentServer::ipcSendCommandLine())
         exit(0);
 
-    PaymentServer *paymentServer = new PaymentServer(&app);
+    PaymentServer* paymentServer = new PaymentServer(&app);
 
 #ifdef Q_OS_WIN
     if(!cmdLineParseResult) {
@@ -115,9 +115,6 @@ int main(int argc, char *argv[]) {
 
     QString dataDirPath = Settings::instance().getDataDir().absolutePath();
 
-    /*if (!QDir().exists(dataDirPath)) {
-        QDir().mkpath(dataDirPath);
-    }*/
     if (!Tools::directoryExists(dataDirPath.toStdString())) {
         if (!Tools::create_directories_if_necessary(dataDirPath.toStdString())) {
             throw std::runtime_error("Can't create directory: " + dataDirPath.toStdString());

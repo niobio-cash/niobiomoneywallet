@@ -4,8 +4,9 @@
 **1. Clone wallet sources**
 
 ```
-git clone https://github.com/niobio-cash/niobio-wallet.git
-git submodule update --init
+git clone https://github.com/quan-projects/quan-desktop-wallet.git
+git submodule sync
+git submodule update --init --recursive --remote
 ```
 
 **2. Install the dependencies**
@@ -31,8 +32,9 @@ mkdir build && cd build && cmake .. && make
 **1. Clonar fontes da Carteira**
 
 ```
-git clone https://github.com/niobio-cash/niobio-wallet.git
-git submodule update --init
+git clone https://github.com/quan-projects/quan-desktop-wallet.git
+git submodule sync
+git submodule update --init --recursive --remote
 ```
 
 **2. Instalar as Dependências**
